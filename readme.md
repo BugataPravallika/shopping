@@ -100,9 +100,36 @@ npm run server
 
 ```
 # Create frontend prod build
-cd frontend
 npm run build
 ```
+
+### Deploy to Production
+
+1. **Backend Deployment (Render.com - Free)**:
+   - Create a free account at [Render.com](https://render.com)
+   - Connect your GitHub repository
+   - Create a new Web Service
+   - Set build command: `npm install`
+   - Set start command: `npm start`
+   - Add environment variables:
+     - `NODE_ENV=production`
+     - `MONGO_URI=your_mongodb_atlas_uri`
+     - `JWT_SECRET=your_jwt_secret`
+     - `PAYPAL_CLIENT_ID=your_paypal_client_id`
+     - `PAYPAL_APP_SECRET=your_paypal_app_secret`
+     - `PAYPAL_API_URL=https://api-m.sandbox.paypal.com`
+     - `PAGINATION_LIMIT=8`
+
+2. **Frontend Deployment (Vercel - Free)**:
+   - Create a free account at [Vercel.com](https://vercel.com)
+   - Connect your GitHub repository
+   - Deploy the frontend folder
+   - Set build command: `npm run build`
+   - Add environment variable: `REACT_APP_API_URL=https://your-backend-url.onrender.com`
+
+3. **Database (MongoDB Atlas - Free)**:
+   - Create a free cluster at [MongoDB Atlas](https://www.mongodb.com/atlas)
+   - Get the connection string and use it as MONGO_URI
 
 ### Seed Database
 

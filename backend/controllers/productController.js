@@ -1,6 +1,14 @@
 import asyncHandler from '../middleware/asyncHandler.js';
 import Product from '../models/productModel.js';
 
+// @desc    Get product categories
+// @route   GET /api/products/categories
+// @access  Public
+const getCategories = asyncHandler(async (req, res) => {
+  const categories = await Product.distinct('category');
+  res.json(categories);
+});
+
 // @desc    Fetch all products
 // @route   GET /api/products
 // @access  Public
@@ -17,8 +25,10 @@ const getProducts = asyncHandler(async (req, res) => {
       }
     : {};
 
-  const count = await Product.countDocuments({ ...keyword });
-  const products = await Product.find({ ...keyword })
+  const category = req.query.category ? { category: req.query.category } : {};
+
+  const count = await Product.countDocuments({ ...keyword, ...category });
+  const products = await Product.find({ ...keyword, ...category })
     .limit(pageSize)
     .skip(pageSize * (page - 1));
 
@@ -162,4 +172,5 @@ export {
   deleteProduct,
   createProductReview,
   getTopProducts,
+  getCategories,
 };

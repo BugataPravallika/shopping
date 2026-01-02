@@ -1,6 +1,6 @@
-import { Row, Col } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
-import { useGetProductsQuery } from '../slices/productsApiSlice';
+import { Row, Col, Form } from 'react-bootstrap';
+import { useParams, useNavigate, useSearchParams } from 'react-router-dom';
+import { useGetProductsQuery, useGetCategoriesQuery } from '../slices/productsApiSlice';
 import { Link } from 'react-router-dom';
 import Product from '../components/Product';
 import Loader from '../components/Loader';
@@ -8,14 +8,31 @@ import Message from '../components/Message';
 import Paginate from '../components/Paginate';
 import ProductCarousel from '../components/ProductCarousel';
 import Meta from '../components/Meta';
+import { useState, useEffect } from 'react';
 
 const HomeScreen = () => {
   const { pageNumber, keyword } = useParams();
+  const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const [category, setCategory] = useState(searchParams.get('category') || '');
 
   const { data, isLoading, error } = useGetProductsQuery({
     keyword,
     pageNumber,
+    category,
   });
+
+  const { data: categories } = useGetCategoriesQuery();
+
+  const categoryHandler = (e) => {
+    const newCategory = e.target.value;
+    setCategory(newCategory);
+    navigate(`/?category=${newCategory}`);
+  };
+
+  useEffect(() => {
+    setCategory(searchParams.get('category') || '');
+  }, [searchParams]);
 
   return (
     <>
@@ -26,6 +43,18 @@ const HomeScreen = () => {
           Go Back
         </Link>
       )}
+      <Row className='mb-3'>
+        <Col md={4}>
+          <Form.Select value={category} onChange={categoryHandler}>
+            <option value=''>All Categories</option>
+            {categories?.map((cat) => (
+              <option key={cat} value={cat}>
+                {cat}
+              </option>
+            ))}
+          </Form.Select>
+        </Col>
+      </Row>
       {isLoading ? (
         <Loader />
       ) : error ? (

@@ -46,8 +46,12 @@ export const productsApiSlice = apiSlice.injectEndpoints({
       }),
       providesTags: ['Product'],
     }),
-    createReview: builder.mutation({
-      query: (data) => ({
+    getCategories: builder.query({
+      query: () => ({
+        url: `${PRODUCTS_URL}/categories`,
+      }),
+      keepUnusedDataFor: 5,
+    }),
         url: `${PRODUCTS_URL}/${data.productId}/reviews`,
         method: 'POST',
         body: data,
@@ -70,4 +74,5 @@ export const {
   useDeleteProductMutation,
   useCreateReviewMutation,
   useGetTopProductsQuery,
+  useGetCategoriesQuery,
 } = productsApiSlice;
