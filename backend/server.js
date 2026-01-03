@@ -2,6 +2,7 @@ import path from 'path';
 import express from 'express';
 import dotenv from 'dotenv';
 import cookieParser from 'cookie-parser';
+import cors from 'cors';
 dotenv.config();
 import connectDB from './config/db.js';
 import productRoutes from './routes/productRoutes.js';
@@ -46,6 +47,16 @@ const seedDatabase = async () => {
 seedDatabase();
 
 const app = express();
+
+// Configure CORS
+app.use(cors({
+  origin: [
+    'http://localhost:3000',
+    'https://shopping-git-main-pravallikabugatas-projects.vercel.app',
+    'https://shopping.vercel.app'
+  ],
+  credentials: true,
+}));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
