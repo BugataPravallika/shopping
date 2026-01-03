@@ -55,7 +55,8 @@ app.use(cors({
   origin: [
     'http://localhost:3000',
     'https://shopping-git-main-pravallikabugatas-projects.vercel.app',
-    'https://shopping.vercel.app'
+    'https://shopping.vercel.app',
+    'https://shopping-mwyez34bh-pravallikabugatas-projects.vercel.app'
   ],
   credentials: true,
 }));
