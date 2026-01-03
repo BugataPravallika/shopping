@@ -10,10 +10,40 @@ import orderRoutes from './routes/orderRoutes.js';
 import uploadRoutes from './routes/uploadRoutes.js';
 import wishlistRoutes from './routes/wishlistRoutes.js';
 import { notFound, errorHandler } from './middleware/errorMiddleware.js';
+import User from './models/userModel.js';
+import Product from './models/productModel.js';
+import users from './data/users.js';
+import products from './data/products.js';
 
 const port = process.env.PORT || 5000;
 
 connectDB();
+
+// Seed database in production if no users exist
+const seedDatabase = async () => {
+  try {
+    const userCount = await User.countDocuments();
+    if (userCount === 0) {
+      console.log('Seeding database...');
+      await User.deleteMany();
+      await Product.deleteMany();
+
+      const createdUsers = await User.insertMany(users);
+      const adminUser = createdUsers[0]._id;
+
+      const sampleProducts = products.map((product) => {
+        return { ...product, user: adminUser };
+      });
+
+      await Product.insertMany(sampleProducts);
+      console.log('Database seeded successfully!');
+    }
+  } catch (error) {
+    console.error('Error seeding database:', error);
+  }
+};
+
+seedDatabase();
 
 const app = express();
 
