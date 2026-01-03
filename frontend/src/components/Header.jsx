@@ -1,5 +1,5 @@
 import { Navbar, Nav, Container, NavDropdown, Badge } from 'react-bootstrap';
-import { FaShoppingCart, FaUser } from 'react-icons/fa';
+import { FaShoppingCart, FaUser, FaHeart } from 'react-icons/fa';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate, Link } from 'react-router-dom';
 import { useLogoutMutation } from '../slices/usersApiSlice';
@@ -50,11 +50,19 @@ const Header = () => {
                   </Badge>
                 )}
               </Nav.Link>
+              {userInfo && (
+                <Nav.Link as={Link} to='/wishlist'>
+                  <FaHeart /> Wishlist
+                </Nav.Link>
+              )}
               {userInfo ? (
                 <>
                   <NavDropdown title={userInfo.name} id='username'>
                     <NavDropdown.Item as={Link} to='/profile'>
                       Profile
+                    </NavDropdown.Item>
+                    <NavDropdown.Item as={Link} to='/wishlist'>
+                      My Wishlist
                     </NavDropdown.Item>
                     <NavDropdown.Item onClick={logoutHandler}>
                       Logout
