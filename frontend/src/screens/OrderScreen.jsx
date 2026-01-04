@@ -19,14 +19,14 @@ const OrderScreen = () => {
   const {
     data: order,
     refetch,
-    isLoading,
+    isLoading, 
     error,
   } = useGetOrderDetailsQuery(orderId);
 
   const [payOrder, { isLoading: loadingPay }] = usePayOrderMutation();
 
   const [deliverOrder, { isLoading: loadingDeliver }] =
-    useDeliverOrderMutation();
+    useDeliverOrderMutation(); 
 
   const { userInfo } = useSelector((state) => state.auth);
 
