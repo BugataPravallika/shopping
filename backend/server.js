@@ -12,6 +12,7 @@ import userRoutes from './routes/userRoutes.js';
 import orderRoutes from './routes/orderRoutes.js';
 import uploadRoutes from './routes/uploadRoutes.js';
 import wishlistRoutes from './routes/wishlistRoutes.js';
+import cartRoutes from './routes/cartRoutes.js';
 import { notFound, errorHandler } from './middleware/errorMiddleware.js';
 import User from './models/userModel.js';
 import Product from './models/productModel.js';
@@ -19,8 +20,6 @@ import users from './data/users.js';
 import products from './data/products.js';
 
 const port = process.env.PORT || 5000;
-
-connectDB();
 
 // Seed database in production if no users exist
 const seedDatabase = async () => {
@@ -46,45 +45,66 @@ const seedDatabase = async () => {
   }
 };
 
-seedDatabase();
+// Connect to database and start server
+const startServer = async () => {
+  try {
+    await connectDB();
+    await seedDatabase();
 
-const app = express();
+    const app = express();
 
-// Configure CORS
-app.use(cors({
-  origin: [
-    'http://localhost:3000',
-    'https://shopping-git-main-pravallikabugatas-projects.vercel.app',
-    'https://shopping.vercel.app',
-    'https://shopping-mwyez34bh-pravallikabugatas-projects.vercel.app'
-  ],
-  credentials: true,
-}));
+    // Configure CORS
+    app.use(cors({
+      origin: [
+        'http://localhost:3000',
+        'https://shopping-git-main-pravallikabugatas-projects.vercel.app',
+        'https://shopping.vercel.app',
+        'https://shopping-mwyez34bh-pravallikabugatas-projects.vercel.app'
+      ],
+      credentials: true,
+    }));
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
-app.use(cookieParser());
+    app.use(express.json());
+    app.use(express.urlencoded({ extended: true }));
+    app.use(cookieParser());
 
-app.use('/api/products', productRoutes);
-app.use('/api/users', userRoutes);
-app.use('/api/orders', orderRoutes);
-app.use('/api/upload', uploadRoutes);
-app.use('/api/wishlist', wishlistRoutes);
+    app.use('/api/products', productRoutes);
+    app.use('/api/users', userRoutes);
+    app.use('/api/orders', orderRoutes);
+    app.use('/api/upload', uploadRoutes);
+    app.use('/api/wishlist', wishlistRoutes);
+    app.use('/api/cart', cartRoutes);
 
-app.get('/api/config/paypal', (req, res) =>
-  res.send({ clientId: process.env.PAYPAL_CLIENT_ID })
-);
+    app.get('/api/config/paypal', (req, res) =>
+      res.send({ clientId: process.env.PAYPAL_CLIENT_ID })
+    );
 
-if (process.env.NODE_ENV === 'production') {
-  app.use('/uploads', express.static('/var/data/uploads'));
-} else {
-  const __dirname = path.resolve();
-  app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
-}
+    if (process.env.NODE_ENV === 'production') {
+      const __dirname = path.resolve();
+      app.use('/uploads', express.static('/var/data/uploads'));
+      app.use(express.static(path.join(__dirname, '/frontend/build')));
 
-app.use(notFound);
-app.use(errorHandler);
+      app.get('*', (req, res) =>
+        res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'))
+      );
+    } else {
+      const __dirname = path.resolve();
+      app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
+      app.get('/', (req, res) => {
+        res.send('API is running...');
+      });
+    }
 
-app.listen(port, () =>
-  console.log(`Server running in ${process.env.NODE_ENV} mode on port ${port}`)
-);
+    app.use(notFound);
+    app.use(errorHandler);
+
+    app.listen(port, () =>
+      console.log(`Server running in ${process.env.NODE_ENV} mode on port ${port}`)
+    );
+  } catch (error) {
+    console.error('Error starting server:', error);
+    process.exit(1);
+  }
+};
+
+startServer();

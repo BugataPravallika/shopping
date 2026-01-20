@@ -11,6 +11,7 @@ import {
   useGetOrderDetailsQuery,
   useGetPaypalClientIdQuery,
   usePayOrderMutation,
+  usePayOrderAdminMutation,
 } from '../slices/ordersApiSlice';
 
 const OrderScreen = () => {
@@ -19,14 +20,15 @@ const OrderScreen = () => {
   const {
     data: order,
     refetch,
-    isLoading, 
+    isLoading,
     error,
   } = useGetOrderDetailsQuery(orderId);
 
   const [payOrder, { isLoading: loadingPay }] = usePayOrderMutation();
+  const [payOrderAdmin, { isLoading: loadingPayAdmin }] = usePayOrderAdminMutation();
 
   const [deliverOrder, { isLoading: loadingDeliver }] =
-    useDeliverOrderMutation(); 
+    useDeliverOrderMutation();
 
   const { userInfo } = useSelector((state) => state.auth);
 
@@ -45,7 +47,7 @@ const OrderScreen = () => {
           type: 'resetOptions',
           value: {
             'client-id': paypal.clientId,
-            currency: 'USD',
+            currency: 'INR',
           },
         });
         paypalDispatch({ type: 'setLoadingStatus', value: 'pending' });
@@ -99,6 +101,16 @@ const OrderScreen = () => {
   const deliverHandler = async () => {
     await deliverOrder(orderId);
     refetch();
+  };
+
+  const payAdminHandler = async () => {
+    try {
+      await payOrderAdmin(orderId).unwrap();
+      refetch();
+      toast.success('Order marked as paid');
+    } catch (err) {
+      toast.error(err?.data?.message || err.error);
+    }
   };
 
   return isLoading ? (
@@ -171,7 +183,7 @@ const OrderScreen = () => {
                           </Link>
                         </Col>
                         <Col md={4}>
-                          {item.qty} x ${item.price} = ${item.qty * item.price}
+                          {item.qty} x ₹{item.price.toLocaleString('en-IN')} = ₹{(item.qty * item.price).toLocaleString('en-IN')}
                         </Col>
                       </Row>
                     </ListGroup.Item>
@@ -190,25 +202,25 @@ const OrderScreen = () => {
               <ListGroup.Item>
                 <Row>
                   <Col>Items</Col>
-                  <Col>${order.itemsPrice}</Col>
+                  <Col>₹{Number(order.itemsPrice).toLocaleString('en-IN')}</Col>
                 </Row>
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
                   <Col>Shipping</Col>
-                  <Col>${order.shippingPrice}</Col>
+                  <Col>₹{Number(order.shippingPrice).toLocaleString('en-IN')}</Col>
                 </Row>
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
                   <Col>Tax</Col>
-                  <Col>${order.taxPrice}</Col>
+                  <Col>₹{Number(order.taxPrice).toLocaleString('en-IN')}</Col>
                 </Row>
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
                   <Col>Total</Col>
-                  <Col>${order.totalPrice}</Col>
+                  <Col>₹{Number(order.totalPrice).toLocaleString('en-IN')}</Col>
                 </Row>
               </ListGroup.Item>
               {!order.isPaid && (
@@ -227,19 +239,53 @@ const OrderScreen = () => {
                         Test Pay Order
                       </Button> */}
 
-                      <div>
-                        <PayPalButtons
-                          createOrder={createOrder}
-                          onApprove={onApprove}
-                          onError={onError}
-                        ></PayPalButtons>
-                      </div>
+                      {order.paymentMethod === 'PayPal' && (
+                        <div>
+                          <PayPalButtons
+                            createOrder={createOrder}
+                            onApprove={onApprove}
+                            onError={onError}
+                          ></PayPalButtons>
+                        </div>
+                      )}
+
+                      {order.paymentMethod === 'UPI QR' && (
+                        <div className='p-3 border rounded bg-light text-center'>
+                          <p className='fw-bold mb-2'>Scan & Pay with UPI:</p>
+                          <Image
+                            src='/qr_code.jpeg'
+                            alt='UPI QR Code'
+                            className='img-fluid border rounded mb-2'
+                            style={{ maxWidth: '200px' }}
+                          />
+                          <p className='mb-1'><strong>Phone:</strong> 8712127297</p>
+                          <p className='text-muted small'>
+                            Scan and pay, then wait for admin confirmation.
+                          </p>
+                        </div>
+                      )}
                     </div>
                   )}
                 </ListGroup.Item>
               )}
 
               {loadingDeliver && <Loader />}
+              {loadingPayAdmin && <Loader />}
+
+              {userInfo &&
+                userInfo.isAdmin &&
+                !order.isPaid &&
+                order.paymentMethod === 'UPI QR' && (
+                  <ListGroup.Item>
+                    <Button
+                      type='button'
+                      className='btn btn-block variant-success'
+                      onClick={payAdminHandler}
+                    >
+                      Mark As Paid (Manual)
+                    </Button>
+                  </ListGroup.Item>
+                )}
 
               {userInfo &&
                 userInfo.isAdmin &&

@@ -4,10 +4,20 @@ import { apiSlice } from './apiSlice';
 export const productsApiSlice = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
     getProducts: builder.query({
-      query: ({ keyword, pageNumber }) => ({
-        url: PRODUCTS_URL,
-        params: { keyword, pageNumber },
-      }),
+      query: ({ keyword, pageNumber, category, minPrice, maxPrice, sortBy }) => {
+        const params = {};
+        if (keyword) params.keyword = keyword;
+        if (pageNumber) params.pageNumber = pageNumber;
+        if (category) params.category = category;
+        if (minPrice) params.minPrice = minPrice;
+        if (maxPrice) params.maxPrice = maxPrice;
+        if (sortBy) params.sortBy = sortBy;
+        
+        return {
+          url: PRODUCTS_URL,
+          params,
+        };
+      },
       keepUnusedDataFor: 5,
       providesTags: ['Products'],
     }),

@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { FaHeart, FaRegHeart } from 'react-icons/fa';
 import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
+import { motion } from 'framer-motion';
 import {
   useGetWishlistQuery,
   useAddToWishlistMutation,
@@ -44,29 +45,26 @@ const WishlistButton = ({ productId }) => {
     }
   };
 
-  if (!userInfo) return null;
-
   return (
-    <button
-      onClick={handleWishlistToggle}
-      className="btn btn-sm position-absolute top-0 end-0 m-2"
+    <motion.button
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.9 }}
+      onClick={(e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        handleWishlistToggle();
+      }}
+      className="z-20 h-10 w-10 flex items-center justify-center rounded-full bg-white/90 backdrop-blur-sm shadow-sm border border-gray-100 group/wish"
       style={{
-        background: 'rgba(255, 255, 255, 0.8)',
-        border: 'none',
-        borderRadius: '50%',
-        width: '40px',
-        height: '40px',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
+        transition: 'all 0.3s ease'
       }}
     >
       {isInWishlist ? (
-        <FaHeart size={18} color="#dc3545" />
+        <FaHeart className="text-red-500 text-lg transition-colors" />
       ) : (
-        <FaRegHeart size={18} color="#6c757d" />
+        <FaRegHeart className="text-gray-400 group-hover/wish:text-red-400 text-lg transition-colors" />
       )}
-    </button>
+    </motion.button>
   );
 };
 

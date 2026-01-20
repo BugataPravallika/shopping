@@ -7,6 +7,7 @@ import FormContainer from '../components/FormContainer';
 
 import { useLoginMutation } from '../slices/usersApiSlice';
 import { setCredentials } from '../slices/authSlice';
+import { useSyncCartMutation } from '../slices/cartApiSlice';
 import { toast } from 'react-toastify';
 
 const LoginScreen = () => {
@@ -17,8 +18,10 @@ const LoginScreen = () => {
   const navigate = useNavigate();
 
   const [login, { isLoading }] = useLoginMutation();
+  const [syncCart] = useSyncCartMutation();
 
   const { userInfo } = useSelector((state) => state.auth);
+  const { cartItems } = useSelector((state) => state.cart);
 
   const { search } = useLocation();
   const sp = new URLSearchParams(search);
@@ -35,6 +38,17 @@ const LoginScreen = () => {
     try {
       const res = await login({ email, password }).unwrap();
       dispatch(setCredentials({ ...res }));
+      
+      // Sync localStorage cart to MongoDB if user has items in cart
+      if (cartItems && cartItems.length > 0) {
+        try {
+          await syncCart(cartItems).unwrap();
+        } catch (syncError) {
+          // Cart sync failed, but login was successful
+          console.error('Cart sync failed:', syncError);
+        }
+      }
+      
       navigate(redirect);
     } catch (err) {
       toast.error(err?.data?.message || err.error);

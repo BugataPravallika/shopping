@@ -1,5 +1,5 @@
 import { apiSlice } from './apiSlice';
-import { USERS_URL } from '../constants';
+import { USERS_URL, WISHLIST_URL } from '../constants';
 
 export const userApiSlice = apiSlice.injectEndpoints({
   endpoints: (builder) => ({
@@ -8,6 +8,7 @@ export const userApiSlice = apiSlice.injectEndpoints({
         url: `${USERS_URL}/auth`,
         method: 'POST',
         body: data,
+        credentials: 'include', // Important for cookies
       }),
     }),
     register: builder.mutation({
@@ -21,6 +22,7 @@ export const userApiSlice = apiSlice.injectEndpoints({
       query: () => ({
         url: `${USERS_URL}/logout`,
         method: 'POST',
+        credentials: 'include',
       }),
     }),
     profile: builder.mutation({
@@ -28,6 +30,53 @@ export const userApiSlice = apiSlice.injectEndpoints({
         url: `${USERS_URL}/profile`,
         method: 'PUT',
         body: data,
+        credentials: 'include',
+      }),
+    }),
+    getSavedAddresses: builder.query({
+      query: () => ({
+        url: `${USERS_URL}/addresses`,
+      }),
+      providesTags: ['Addresses'],
+    }),
+    addSavedAddress: builder.mutation({
+      query: (data) => ({
+        url: `${USERS_URL}/addresses`,
+        method: 'POST',
+        body: data,
+      }),
+      invalidatesTags: ['Addresses'],
+    }),
+    updateSavedAddress: builder.mutation({
+      query: (data) => ({
+        url: `${USERS_URL}/addresses/${data.addressId}`,
+        method: 'PUT',
+        body: data,
+      }),
+      invalidatesTags: ['Addresses'],
+    }),
+    deleteSavedAddress: builder.mutation({
+      query: (addressId) => ({
+        url: `${USERS_URL}/addresses/${addressId}`,
+        method: 'DELETE',
+      }),
+      invalidatesTags: ['Addresses'],
+    }),
+    getWishlist: builder.query({
+      query: () => ({
+        url: `${WISHLIST_URL}`,
+      }),
+    }),
+    addToWishlist: builder.mutation({
+      query: (productId) => ({
+        url: `${WISHLIST_URL}/${productId}`,
+        method: 'POST',
+      }),
+    }),
+    removeFromWishlist: builder.mutation({
+      query: (productId) => ({
+        url: `${WISHLIST_URL}/${productId}`,
+        method: 'DELETE',
       }),
     }),
     getUsers: builder.query({
@@ -69,4 +118,11 @@ export const {
   useDeleteUserMutation,
   useUpdateUserMutation,
   useGetUserDetailsQuery,
+  useGetSavedAddressesQuery,
+  useAddSavedAddressMutation,
+  useUpdateSavedAddressMutation,
+  useDeleteSavedAddressMutation,
+  useGetWishlistQuery,
+  useAddToWishlistMutation,
+  useRemoveFromWishlistMutation,
 } = userApiSlice;

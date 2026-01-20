@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Form, Button } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import { FaSearch } from 'react-icons/fa';
 
 const SearchBox = () => {
   const navigate = useNavigate();
@@ -21,19 +21,19 @@ const SearchBox = () => {
   };
 
   return (
-    <Form onSubmit={submitHandler} className='d-flex'>
-      <Form.Control
+    <form onSubmit={submitHandler} className="relative flex items-center">
+      <input
         type='text'
         name='q'
         onChange={(e) => setKeyword(e.target.value)}
         value={keyword}
         placeholder='Search Products...'
-        className='mr-sm-2 ml-sm-5'
-      ></Form.Control>
-      <Button type='submit' variant='outline-success' className='p-2 mx-2'>
-        Search
-      </Button>
-    </Form>
+        className="w-full sm:w-64 pl-4 pr-10 py-2 rounded-full border border-gray-200 focus:border-accent focus:ring-1 focus:ring-accent focus:outline-none transition-all text-sm bg-gray-50 focus:bg-white"
+      />
+      <button type='submit' className="absolute right-0 top-0 bottom-0 px-3 text-gray-400 hover:text-accent transition-colors">
+        <FaSearch />
+      </button>
+    </form>
   );
 };
 

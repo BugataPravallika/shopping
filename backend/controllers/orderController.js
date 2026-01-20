@@ -24,18 +24,33 @@ const addOrderItems = asyncHandler(async (req, res) => {
       _id: { $in: orderItems.map((x) => x._id) },
     });
 
-    // map over the order items and use the price from our items from database
-    const dbOrderItems = orderItems.map((itemFromClient) => {
+    // Validate stock availability and map order items
+    const dbOrderItems = [];
+    for (const itemFromClient of orderItems) {
       const matchingItemFromDB = itemsFromDB.find(
         (itemFromDB) => itemFromDB._id.toString() === itemFromClient._id
       );
-      return {
+
+      if (!matchingItemFromDB) {
+        res.status(404);
+        throw new Error(`Product ${itemFromClient._id} not found`);
+      }
+
+      // Check stock availability
+      if (matchingItemFromDB.countInStock < itemFromClient.qty) {
+        res.status(400);
+        throw new Error(
+          `Insufficient stock for ${matchingItemFromDB.name}. Only ${matchingItemFromDB.countInStock} available.`
+        );
+      }
+
+      dbOrderItems.push({
         ...itemFromClient,
         product: itemFromClient._id,
         price: matchingItemFromDB.price,
         _id: undefined,
-      };
-    });
+      });
+    }
 
     // calculate prices
     const { itemsPrice, taxPrice, shippingPrice, totalPrice } =
@@ -53,6 +68,22 @@ const addOrderItems = asyncHandler(async (req, res) => {
     });
 
     const createdOrder = await order.save();
+
+    // Reduce stock for each product
+    for (const item of dbOrderItems) {
+      const product = await Product.findById(item.product);
+      if (product) {
+        product.countInStock -= item.qty;
+        await product.save();
+      }
+    }
+
+    // For COD orders, mark as paid immediately (payment on delivery)
+    if (paymentMethod === 'Cash on Delivery' || paymentMethod === 'COD') {
+      createdOrder.isPaid = true;
+      createdOrder.paidAt = Date.now();
+      await createdOrder.save();
+    }
 
     res.status(201).json(createdOrder);
   }
@@ -87,6 +118,19 @@ const getOrderById = asyncHandler(async (req, res) => {
 // @route   PUT /api/orders/:id/pay
 // @access  Private
 const updateOrderToPaid = asyncHandler(async (req, res) => {
+  const order = await Order.findById(req.params.id);
+
+  if (!order) {
+    res.status(404);
+    throw new Error('Order not found');
+  }
+
+  // If payment method is COD, it's already marked as paid during order creation
+  if (order.paymentMethod === 'Cash on Delivery' || order.paymentMethod === 'COD') {
+    return res.json(order);
+  }
+
+  // For PayPal payments, verify the payment
   // NOTE: here we need to verify the payment was made to PayPal before marking
   // the order as paid
   const { verified, value } = await verifyPayPalPayment(req.body.id);
@@ -96,20 +140,38 @@ const updateOrderToPaid = asyncHandler(async (req, res) => {
   const isNewTransaction = await checkIfNewTransaction(Order, req.body.id);
   if (!isNewTransaction) throw new Error('Transaction has been used before');
 
+  // check the correct amount was paid
+  const paidCorrectAmount = order.totalPrice.toString() === value;
+  if (!paidCorrectAmount) throw new Error('Incorrect amount paid');
+
+  order.isPaid = true;
+  order.paidAt = Date.now();
+  order.paymentResult = {
+    id: req.body.id,
+    status: req.body.status,
+    update_time: req.body.update_time,
+    email_address: req.body.payer.email_address,
+  };
+
+  const updatedOrder = await order.save();
+
+  res.json(updatedOrder);
+});
+
+// @desc    Update order to paid (Admin manual)
+// @route   PUT /api/orders/:id/payadmin
+// @access  Private/Admin
+const updateOrderToPaidAdmin = asyncHandler(async (req, res) => {
   const order = await Order.findById(req.params.id);
 
   if (order) {
-    // check the correct amount was paid
-    const paidCorrectAmount = order.totalPrice.toString() === value;
-    if (!paidCorrectAmount) throw new Error('Incorrect amount paid');
-
     order.isPaid = true;
     order.paidAt = Date.now();
     order.paymentResult = {
-      id: req.body.id,
-      status: req.body.status,
-      update_time: req.body.update_time,
-      email_address: req.body.payer.email_address,
+      id: 'MANUAL_' + Date.now(),
+      status: 'COMPLETED',
+      update_time: new Date().toISOString(),
+      email_address: order.user?.email || 'admin@example.com',
     };
 
     const updatedOrder = await order.save();
@@ -153,6 +215,7 @@ export {
   getMyOrders,
   getOrderById,
   updateOrderToPaid,
+  updateOrderToPaidAdmin,
   updateOrderToDelivered,
   getOrders,
 };

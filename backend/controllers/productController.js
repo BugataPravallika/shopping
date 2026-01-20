@@ -12,10 +12,12 @@ const getCategories = asyncHandler(async (req, res) => {
 // @desc    Fetch all products
 // @route   GET /api/products
 // @access  Public
+// @query   keyword, category, minPrice, maxPrice, sortBy, pageNumber
 const getProducts = asyncHandler(async (req, res) => {
-  const pageSize = process.env.PAGINATION_LIMIT;
+  const pageSize = Number(process.env.PAGINATION_LIMIT) || 8;
   const page = Number(req.query.pageNumber) || 1;
 
+  // Build search query
   const keyword = req.query.keyword
     ? {
         name: {
@@ -27,12 +29,55 @@ const getProducts = asyncHandler(async (req, res) => {
 
   const category = req.query.category ? { category: req.query.category } : {};
 
-  const count = await Product.countDocuments({ ...keyword, ...category });
-  const products = await Product.find({ ...keyword, ...category })
+  // Price filtering
+  const priceFilter = {};
+  if (req.query.minPrice) {
+    priceFilter.price = { ...priceFilter.price, $gte: Number(req.query.minPrice) };
+  }
+  if (req.query.maxPrice) {
+    priceFilter.price = { ...priceFilter.price, $lte: Number(req.query.maxPrice) };
+  }
+
+  // Combine all filters
+  const query = { ...keyword, ...category, ...priceFilter };
+
+  // Count total matching products
+  const count = await Product.countDocuments(query);
+
+  // Build sort object
+  let sortBy = {};
+  switch (req.query.sortBy) {
+    case 'price_asc':
+      sortBy = { price: 1 }; // Low to High
+      break;
+    case 'price_desc':
+      sortBy = { price: -1 }; // High to Low
+      break;
+    case 'rating':
+      sortBy = { rating: -1 }; // Highest rating first
+      break;
+    case 'popularity':
+      sortBy = { numReviews: -1 }; // Most reviews first
+      break;
+    case 'newest':
+      sortBy = { createdAt: -1 }; // Latest first
+      break;
+    default:
+      sortBy = { createdAt: -1 }; // Default: newest first
+  }
+
+  // Fetch products with pagination and sorting
+  const products = await Product.find(query)
+    .sort(sortBy)
     .limit(pageSize)
     .skip(pageSize * (page - 1));
 
-  res.json({ products, page, pages: Math.ceil(count / pageSize) });
+  res.json({
+    products,
+    page,
+    pages: Math.ceil(count / pageSize),
+    count,
+  });
 });
 
 // @desc    Fetch single product

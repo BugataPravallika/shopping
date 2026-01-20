@@ -64,11 +64,32 @@ const productSchema = mongoose.Schema(
       required: true,
       default: 0,
     },
+    isFeatured: {
+      type: Boolean,
+      default: false,
+    },
+    badge: {
+      type: String,
+      enum: ['New', 'Trending', 'Limited Stock', 'None'],
+      default: 'None',
+    },
   },
   {
     timestamps: true,
   }
 );
+
+// Create indexes for better query performance
+// Text index for product name search
+productSchema.index({ name: 'text' });
+// Indexes for filtering and sorting
+productSchema.index({ category: 1 });
+productSchema.index({ price: 1 });
+productSchema.index({ rating: -1 }); // Descending for top-rated products
+productSchema.index({ numReviews: -1 }); // For popularity sorting
+// Compound index for category + price queries
+productSchema.index({ category: 1, price: 1 });
+productSchema.index({ isFeatured: -1 });
 
 const Product = mongoose.model('Product', productSchema);
 

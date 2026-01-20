@@ -79,6 +79,7 @@ const getUserProfile = asyncHandler(async (req, res) => {
       name: user.name,
       email: user.email,
       isAdmin: user.isAdmin,
+      savedAddresses: user.savedAddresses,
     });
   } else {
     res.status(404);
@@ -179,6 +180,119 @@ const updateUser = asyncHandler(async (req, res) => {
   }
 });
 
+// @desc    Get saved addresses
+// @route   GET /api/users/addresses
+// @access  Private
+const getSavedAddresses = asyncHandler(async (req, res) => {
+  const user = await User.findById(req.user._id);
+
+  if (!user) {
+    res.status(404);
+    throw new Error('User not found');
+  }
+
+  res.json(user.savedAddresses);
+});
+
+// @desc    Add saved address
+// @route   POST /api/users/addresses
+// @access  Private
+const addSavedAddress = asyncHandler(async (req, res) => {
+  const { name, address, city, postalCode, country, isDefault } = req.body;
+
+  const user = await User.findById(req.user._id);
+
+  if (!user) {
+    res.status(404);
+    throw new Error('User not found');
+  }
+
+  // If this is set as default, unset all other defaults
+  if (isDefault) {
+    user.savedAddresses.forEach((addr) => {
+      addr.isDefault = false;
+    });
+  }
+
+  user.savedAddresses.push({
+    name,
+    address,
+    city,
+    postalCode,
+    country,
+    isDefault: isDefault || false,
+  });
+
+  await user.save();
+
+  res.status(201).json(user.savedAddresses);
+});
+
+// @desc    Update saved address
+// @route   PUT /api/users/addresses/:addressId
+// @access  Private
+const updateSavedAddress = asyncHandler(async (req, res) => {
+  const { name, address, city, postalCode, country, isDefault } = req.body;
+
+  const user = await User.findById(req.user._id);
+
+  if (!user) {
+    res.status(404);
+    throw new Error('User not found');
+  }
+
+  const addressIndex = user.savedAddresses.findIndex(
+    (addr) => addr._id.toString() === req.params.addressId
+  );
+
+  if (addressIndex === -1) {
+    res.status(404);
+    throw new Error('Address not found');
+  }
+
+  // If this is set as default, unset all other defaults
+  if (isDefault) {
+    user.savedAddresses.forEach((addr, index) => {
+      if (index !== addressIndex) {
+        addr.isDefault = false;
+      }
+    });
+  }
+
+  // Update the address
+  if (name) user.savedAddresses[addressIndex].name = name;
+  if (address) user.savedAddresses[addressIndex].address = address;
+  if (city) user.savedAddresses[addressIndex].city = city;
+  if (postalCode) user.savedAddresses[addressIndex].postalCode = postalCode;
+  if (country) user.savedAddresses[addressIndex].country = country;
+  if (isDefault !== undefined)
+    user.savedAddresses[addressIndex].isDefault = isDefault;
+
+  await user.save();
+
+  res.json(user.savedAddresses);
+});
+
+// @desc    Delete saved address
+// @route   DELETE /api/users/addresses/:addressId
+// @access  Private
+const deleteSavedAddress = asyncHandler(async (req, res) => {
+  const user = await User.findById(req.user._id);
+
+  if (!user) {
+    res.status(404);
+    throw new Error('User not found');
+  }
+
+  user.savedAddresses = user.savedAddresses.filter(
+    (addr) => addr._id.toString() !== req.params.addressId
+  );
+
+  await user.save();
+
+  res.json(user.savedAddresses);
+});
+
 export {
   authUser,
   registerUser,
@@ -189,4 +303,8 @@ export {
   deleteUser,
   getUserById,
   updateUser,
+  getSavedAddresses,
+  addSavedAddress,
+  updateSavedAddress,
+  deleteSavedAddress,
 };

@@ -1,53 +1,47 @@
-main {
-  min-height: 80vh;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-primary text-gray-800 font-sans antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading font-semibold text-gray-900;
+  }
 }
 
-.rating span {
-  margin: 0.1rem;
-}
+@layer components {
+  .glass {
+    @apply bg-white/70 backdrop-blur-md border border-white/50 shadow-glass;
+  }
 
-.rating svg {
-  color: #f8e825;
-}
+  .card-modern {
+    @apply bg-white rounded-2xl shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border-none;
+  }
 
-.rating-text {
-  font-size: 0.8rem;
-  font-weight: 600;
-  padding-left: 0.5rem;
-}
+  .btn-primary-modern {
+    @apply px-4 py-2 rounded-lg font-medium transition-all duration-200 bg-accent text-white hover:bg-blue-600 hover:-translate-y-0.5 shadow-sm;
+  }
 
-.product-title {
-  height: 2.5em; /* Set a fixed height */
-  overflow: hidden; /* Hide overflow content */
-  text-overflow: ellipsis; /* Add ellipsis for long text */
-  white-space: nowrap; /* Prevent wrapping */
-}
+  /* Bootstrap Compatibility Overrides */
+  .btn-primary {
+    @apply bg-accent border-accent hover:bg-blue-600 hover:border-blue-600 transition-all duration-200;
+  }
 
-table td,
-table th {
-  text-align: center;
-}
+  .form-control:focus {
+    @apply border-accent shadow-none ring-1 ring-accent;
+  }
 
-.review {
-  margin-top: 30px;
-}
-
-.review h2 {
-  font-size: 24px;
-  background: #f4f4f4;
-  padding: 10px;
-  border: 1px solid #ddd;
-}
-
-.review button {
-  margin-top: 10px;
-}
-
-.carousel-caption {
-  position: absolute;
-  width: 100%;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  .page-item.active .page-link {
+    @apply bg-accent border-accent;
+  }
 }

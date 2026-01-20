@@ -1,17 +1,13 @@
-import { Container, Row, Col } from 'react-bootstrap';
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer>
-      <Container>
-        <Row>
-          <Col className='text-center py-3'>
-            <p>ProShop &copy; {currentYear}</p>
-          </Col>
-        </Row>
-      </Container>
+    <footer className="bg-white border-t border-gray-100 mt-10">
+      <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-center items-center">
+          <p className="text-gray-500 text-sm">ProShop &copy; {currentYear}. All Rights Reserved.</p>
+        </div>
+      </div>
     </footer>
   );
 };

@@ -42,7 +42,27 @@ const PaymentScreen = () => {
               id='PayPal'
               name='paymentMethod'
               value='PayPal'
-              checked
+              checked={paymentMethod === 'PayPal'}
+              onChange={(e) => setPaymentMethod(e.target.value)}
+            ></Form.Check>
+            <Form.Check
+              className='my-2'
+              type='radio'
+              label='Cash on Delivery (COD)'
+              id='COD'
+              name='paymentMethod'
+              value='Cash on Delivery'
+              checked={paymentMethod === 'Cash on Delivery'}
+              onChange={(e) => setPaymentMethod(e.target.value)}
+            ></Form.Check>
+            <Form.Check
+              className='my-2'
+              type='radio'
+              label='UPI / QR Scan'
+              id='UPIQR'
+              name='paymentMethod'
+              value='UPI QR'
+              checked={paymentMethod === 'UPI QR'}
               onChange={(e) => setPaymentMethod(e.target.value)}
             ></Form.Check>
           </Col>

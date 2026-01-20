@@ -9,6 +9,7 @@ import Loader from '../components/Loader';
 import { useProfileMutation } from '../slices/usersApiSlice';
 import { useGetMyOrdersQuery } from '../slices/ordersApiSlice';
 import { setCredentials } from '../slices/authSlice';
+import SavedAddresses from '../components/SavedAddresses';
 import { Link } from 'react-router-dom';
 
 const ProfileScreen = () => {
@@ -103,6 +104,8 @@ const ProfileScreen = () => {
           </Button>
           {loadingUpdateProfile && <Loader />}
         </Form>
+        
+        <SavedAddresses />
       </Col>
       <Col md={9}>
         <h2>My Orders</h2>

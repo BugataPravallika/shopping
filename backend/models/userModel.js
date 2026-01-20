@@ -27,11 +27,42 @@ const userSchema = mongoose.Schema(
         ref: 'Product',
       },
     ],
+    savedAddresses: [
+      {
+        name: {
+          type: String,
+          required: true,
+        },
+        address: {
+          type: String,
+          required: true,
+        },
+        city: {
+          type: String,
+          required: true,
+        },
+        postalCode: {
+          type: String,
+          required: true,
+        },
+        country: {
+          type: String,
+          required: true,
+        },
+        isDefault: {
+          type: Boolean,
+          default: false,
+        },
+      },
+    ],
   },
   {
     timestamps: true,
   }
 );
+
+// Create indexes for better query performance
+userSchema.index({ email: 1 }); // Email is already unique, but explicit index helps
 
 // Match user entered password to hashed password in database
 userSchema.methods.matchPassword = async function (enteredPassword) {

@@ -10,10 +10,13 @@ import connectDB from './config/db.js';
 
 dotenv.config();
 
-connectDB();
+// connectDB(); // Removed top-level call
+
 
 const importData = async () => {
   try {
+    await connectDB();
+
     await Order.deleteMany();
     await Product.deleteMany();
     await User.deleteMany();
@@ -26,7 +29,11 @@ const importData = async () => {
       return { ...product, user: adminUser };
     });
 
-    await Product.insertMany(sampleProducts);
+    // Insert products one by one to avoid Mongoose parallelLimit issues
+    for (const product of sampleProducts) {
+      if (!product.name) console.log('Invalid product:', product);
+      await Product.create(product);
+    }
 
     console.log('Data Imported!'.green.inverse);
     process.exit();
@@ -38,6 +45,8 @@ const importData = async () => {
 
 const destroyData = async () => {
   try {
+    await connectDB();
+
     await Order.deleteMany();
     await Product.deleteMany();
     await User.deleteMany();

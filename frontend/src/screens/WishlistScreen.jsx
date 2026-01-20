@@ -72,7 +72,7 @@ const WishlistScreen = () => {
                     </div>
                   </Card.Text>
 
-                  <Card.Text as="h3">${product.price}</Card.Text>
+                  <Card.Text as="h3">₹{product.price.toLocaleString('en-IN')}</Card.Text>
 
                   <div className="d-flex justify-content-between align-items-center">
                     <Button

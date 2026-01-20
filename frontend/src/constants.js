@@ -1,8 +1,14 @@
 // export const BASE_URL =
 //   process.env.NODE_ENV === 'develeopment' ? 'http://localhost:5000' : '';
-export const BASE_URL = 'https://shopping-gbpj.onrender.com'; // Temporary hardcoded for testing
+// Use local backend in development, production URL in production
+export const BASE_URL =
+  process.env.NODE_ENV === 'production'
+    ? 'https://shopping-gbpj.onrender.com'
+    : '';
+
 export const PRODUCTS_URL = '/api/products';
 export const USERS_URL = '/api/users';
 export const ORDERS_URL = '/api/orders';
 export const PAYPAL_URL = '/api/config/paypal';
 export const WISHLIST_URL = '/api/wishlist';
+export const CART_URL = '/api/cart';

@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import { Button, Row, Col, ListGroup, Image, Card } from 'react-bootstrap';
+import { Button, Row, Col, ListGroup, Image, Card, Form } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import Message from '../components/Message';
 import CheckoutSteps from '../components/CheckoutSteps';
@@ -13,8 +13,24 @@ const PlaceOrderScreen = () => {
   const navigate = useNavigate();
 
   const cart = useSelector((state) => state.cart);
+  const [coupon, setCoupon] = useState('');
+  const [discount, setDiscount] = useState(0);
 
   const [createOrder, { isLoading, error }] = useCreateOrderMutation();
+
+  const applyCouponHandler = () => {
+    if (coupon === 'WELCOME10') {
+      setDiscount(10);
+      toast.success('Coupon Applied: ₹10 Off');
+    } else if (coupon === 'FESTIVE200') {
+      setDiscount(200);
+      toast.success('Coupon Applied: ₹200 Off');
+    } else {
+      toast.error('Invalid Coupon');
+    }
+  };
+
+  const finalTotal = cart.totalPrice - discount;
 
   useEffect(() => {
     if (!cart.shippingAddress.address) {
@@ -34,7 +50,9 @@ const PlaceOrderScreen = () => {
         itemsPrice: cart.itemsPrice,
         shippingPrice: cart.shippingPrice,
         taxPrice: cart.taxPrice,
-        totalPrice: cart.totalPrice,
+        taxPrice: cart.taxPrice,
+        totalPrice: finalTotal,
+        coupon: coupon || '',
       }).unwrap();
       dispatch(clearCartItems());
       navigate(`/order/${res._id}`);
@@ -63,6 +81,26 @@ const PlaceOrderScreen = () => {
               <h2>Payment Method</h2>
               <strong>Method: </strong>
               {cart.paymentMethod}
+              {cart.paymentMethod === 'UPI QR' && (
+                <div className='mt-3 p-3 border rounded bg-light'>
+                  <p className='fw-bold mb-2'>
+                    <i className='fas fa-qrcode me-2'></i>Scan & Pay with any UPI App:
+                  </p>
+                  <div className='text-center bg-white p-2 d-inline-block border rounded mb-2'>
+                    <Image
+                      src='/qr_code.jpeg'
+                      alt='UPI QR Code'
+                      style={{ width: '200px', height: '200px', objectFit: 'contain' }}
+                    />
+                  </div>
+                  <p className='mb-1'>
+                    <strong>Phone Number:</strong> 8712127297
+                  </p>
+                  <p className='text-muted small mb-0'>
+                    Scan the QR and complete the payment. After payment, place the order.
+                  </p>
+                </div>
+              )}
             </ListGroup.Item>
 
             <ListGroup.Item>
@@ -88,8 +126,7 @@ const PlaceOrderScreen = () => {
                           </Link>
                         </Col>
                         <Col md={4}>
-                          {item.qty} x ${item.price} = $
-                          {(item.qty * (item.price * 100)) / 100}
+                          {item.qty} x ₹{item.price.toLocaleString('en-IN')} = ₹{((item.qty * (item.price * 100)) / 100).toLocaleString('en-IN')}
                         </Col>
                       </Row>
                     </ListGroup.Item>
@@ -108,25 +145,51 @@ const PlaceOrderScreen = () => {
               <ListGroup.Item>
                 <Row>
                   <Col>Items</Col>
-                  <Col>${cart.itemsPrice}</Col>
+                  <Col>₹{Number(cart.itemsPrice).toLocaleString('en-IN')}</Col>
                 </Row>
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
                   <Col>Shipping</Col>
-                  <Col>${cart.shippingPrice}</Col>
+                  <Col>₹{Number(cart.shippingPrice).toLocaleString('en-IN')}</Col>
                 </Row>
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
                   <Col>Tax</Col>
-                  <Col>${cart.taxPrice}</Col>
+                  <Col>₹{Number(cart.taxPrice).toLocaleString('en-IN')}</Col>
                 </Row>
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
                   <Col>Total</Col>
-                  <Col>${cart.totalPrice}</Col>
+                  <Col>
+                    {discount > 0 ? (
+                      <>
+                        <span style={{ textDecoration: 'line-through' }} className='text-muted me-2'>
+                          ₹{Number(cart.totalPrice).toLocaleString('en-IN')}
+                        </span>
+                        <span>₹{Number(finalTotal).toLocaleString('en-IN')}</span>
+                      </>
+                    ) : (
+                      `₹${Number(cart.totalPrice).toLocaleString('en-IN')}`
+                    )}
+                  </Col>
+                </Row>
+              </ListGroup.Item>
+              <ListGroup.Item>
+                <Row>
+                  <Col md={8}>
+                    <Form.Control
+                      type='text'
+                      placeholder='Enter Coupon'
+                      value={coupon}
+                      onChange={(e) => setCoupon(e.target.value)}
+                    />
+                  </Col>
+                  <Col>
+                    <Button onClick={applyCouponHandler} size='sm'>Apply</Button>
+                  </Col>
                 </Row>
               </ListGroup.Item>
               <ListGroup.Item>

@@ -56,6 +56,10 @@ const orderSchema = mongoose.Schema(
       required: true,
       default: 0.0,
     },
+    coupon: {
+      type: String,
+      required: false,
+    },
     isPaid: {
       type: Boolean,
       required: true,
@@ -77,6 +81,11 @@ const orderSchema = mongoose.Schema(
     timestamps: true,
   }
 );
+
+// Create indexes for better query performance
+orderSchema.index({ user: 1 }); // For finding user's orders
+orderSchema.index({ createdAt: -1 }); // For recent orders
+orderSchema.index({ isPaid: 1, isDelivered: 1 }); // For order status queries
 
 const Order = mongoose.model('Order', orderSchema);
 

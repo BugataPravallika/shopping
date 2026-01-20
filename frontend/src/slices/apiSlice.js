@@ -10,7 +10,9 @@ import { logout } from './authSlice'; // Import the logout action
 
 const baseQuery = fetchBaseQuery({
   baseUrl: BASE_URL,
+  credentials: 'include', // Important for HTTP-only cookies
   prepareHeaders: (headers, { getState }) => {
+    // Note: We use cookies for auth, but keep this for compatibility
     const token = getState().auth.userInfo?.token;
     if (token) {
       headers.set('authorization', `Bearer ${token}`);
@@ -30,6 +32,6 @@ async function baseQueryWithAuth(args, api, extra) {
 
 export const apiSlice = createApi({
   baseQuery: baseQueryWithAuth, // Use the customized baseQuery
-  tagTypes: ['Product', 'Order', 'User'],
+  tagTypes: ['Product', 'Order', 'User', 'Cart', 'Addresses', 'Wishlist'],
   endpoints: (builder) => ({}),
 });

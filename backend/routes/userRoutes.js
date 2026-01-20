@@ -9,6 +9,10 @@ import {
   deleteUser,
   getUserById,
   updateUser,
+  getSavedAddresses,
+  addSavedAddress,
+  updateSavedAddress,
+  deleteSavedAddress,
 } from '../controllers/userController.js';
 import { protect, admin } from '../middleware/authMiddleware.js';
 
@@ -21,6 +25,14 @@ router
   .route('/profile')
   .get(protect, getUserProfile)
   .put(protect, updateUserProfile);
+router
+  .route('/addresses')
+  .get(protect, getSavedAddresses)
+  .post(protect, addSavedAddress);
+router
+  .route('/addresses/:addressId')
+  .put(protect, updateSavedAddress)
+  .delete(protect, deleteSavedAddress);
 router
   .route('/:id')
   .delete(protect, admin, deleteUser)

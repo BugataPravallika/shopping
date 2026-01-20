@@ -20,6 +20,7 @@ import Rating from '../components/Rating';
 import Loader from '../components/Loader';
 import Message from '../components/Message';
 import Meta from '../components/Meta';
+import WishlistButton from '../components/WishlistButton';
 import { addToCart } from '../slices/cartSlice';
 
 const ProductScreen = () => {
@@ -81,7 +82,12 @@ const ProductScreen = () => {
           <Meta title={product.name} description={product.description} />
           <Row>
             <Col md={6}>
-              <Image src={product.image} alt={product.name} fluid />
+              <div className="relative">
+                <Image src={product.image} alt={product.name} fluid className="rounded-2xl shadow-lg" />
+                <div className="absolute top-4 right-4 z-10">
+                  <WishlistButton productId={product._id} />
+                </div>
+              </div>
             </Col>
             <Col md={3}>
               <ListGroup variant='flush'>
@@ -94,7 +100,7 @@ const ProductScreen = () => {
                     text={`${product.numReviews} reviews`}
                   />
                 </ListGroup.Item>
-                <ListGroup.Item>Price: ${product.price}</ListGroup.Item>
+                <ListGroup.Item>Price: ₹{product.price.toLocaleString('en-IN')}</ListGroup.Item>
                 <ListGroup.Item>
                   Description: {product.description}
                 </ListGroup.Item>
@@ -107,7 +113,7 @@ const ProductScreen = () => {
                     <Row>
                       <Col>Price:</Col>
                       <Col>
-                        <strong>${product.price}</strong>
+                        <strong>₹{product.price.toLocaleString('en-IN')}</strong>
                       </Col>
                     </Row>
                   </ListGroup.Item>
