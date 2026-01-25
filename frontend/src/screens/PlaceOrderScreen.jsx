@@ -50,7 +50,6 @@ const PlaceOrderScreen = () => {
         itemsPrice: cart.itemsPrice,
         shippingPrice: cart.shippingPrice,
         taxPrice: cart.taxPrice,
-        taxPrice: cart.taxPrice,
         totalPrice: finalTotal,
         coupon: coupon || '',
       }).unwrap();
