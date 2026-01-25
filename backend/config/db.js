@@ -1,8 +1,19 @@
 import mongoose from 'mongoose';
 
+import fetch from 'node-fetch';
+
 const connectDB = async () => {
   try {
     const uri = process.env.MONGO_URI;
+
+    // Log Public IP for Whitelist Verification
+    try {
+      const response = await fetch('https://api.ipify.org?format=json');
+      const data = await response.json();
+      console.log(`🌍 Server Public IP: ${data.ip}`);
+    } catch (e) {
+      console.log('🌍 Could not determine public IP');
+    }
 
     console.log('--- Database Environment Check ---');
     console.log('NODE_ENV:', process.env.NODE_ENV);
@@ -13,13 +24,12 @@ const connectDB = async () => {
       process.exit(1);
     }
 
-    // DEBUG: Log a masked URI to verify it's being read correctly without exposing credentials
     const maskedUri = uri.replace(/\/\/(.*):(.*)@/, '//****:****@');
     console.log(`📡 Attempting to connect to MongoDB: ${maskedUri}`);
 
     const conn = await mongoose.connect(uri, {
-      serverSelectionTimeoutMS: 10000, // 10 seconds timeout
-      socketTimeoutMS: 45000, // 45 seconds
+      serverSelectionTimeoutMS: 10000,
+      family: 4, // FORCE IPv4 (Common fix for Render/Atlas)
     });
 
     console.log(`✅ MongoDB Connected: ${conn.connection.host}`);
