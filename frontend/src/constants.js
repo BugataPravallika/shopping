@@ -1,10 +1,7 @@
 // export const BASE_URL =
 //   process.env.NODE_ENV === 'develeopment' ? 'http://localhost:5000' : '';
 // Use local backend in development, production URL in production
-export const BASE_URL =
-  process.env.NODE_ENV === 'production'
-    ? 'https://shopping-gbpj.onrender.com'
-    : '';
+export const BASE_URL = '';
 
 export const PRODUCTS_URL = '/api/products';
 export const USERS_URL = '/api/users';
