@@ -1,9 +1,20 @@
 import { Link } from 'react-router-dom';
 import Rating from './Rating';
 import WishlistButton from './WishlistButton';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import { FaShoppingCart, FaEye } from 'react-icons/fa';
+import { addToCart } from '../slices/cartSlice';
+import { toast } from 'react-toastify';
 
 const Product = ({ product }) => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const addToCartHandler = () => {
+    dispatch(addToCart({ ...product, qty: 1 }));
+    toast.success('Added to cart');
+  };
   return (
     <div className="group relative bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col h-full overflow-hidden">
 
@@ -32,7 +43,10 @@ const Product = ({ product }) => {
             <FaEye /> View
           </Link>
           <div className="h-4 w-px bg-gray-300"></div>
-          <button className="flex items-center gap-2 text-sm font-semibold text-gray-700 hover:text-accent transition-colors">
+          <button
+            onClick={addToCartHandler}
+            className="flex items-center gap-2 text-sm font-semibold text-gray-700 hover:text-accent transition-colors"
+          >
             <FaShoppingCart /> Add
           </button>
         </div>
@@ -57,9 +71,12 @@ const Product = ({ product }) => {
           </div>
 
           {/* Mobile Only Action */}
-          <Link to={`/product/${product._id}`} className="lg:hidden h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-accent hover:text-white transition-colors">
+          <button
+            onClick={addToCartHandler}
+            className="lg:hidden h-10 w-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-accent hover:text-white transition-colors"
+          >
             <FaShoppingCart />
-          </Link>
+          </button>
         </div>
       </div>
     </div>

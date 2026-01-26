@@ -122,26 +122,34 @@ async function searchPexels(query, perPage = 15) {
 export async function getImageForCategory(category, name = '', index = 0) {
     // 1. Try searching by Product Name for maximum relevance
     if (name) {
-        console.log(`🔍 Searching Pexels for product name: "${name}"`);
-        const photos = await searchPexels(name, 5);
-        for (const photo of photos) {
+        // Clean up name for better search (remove brand if it's too specific)
+        const searchQuery = name.split(' - ')[0].replace(/Compact|Modern|Stylish|High-Performance|Elegant|Premium|Durable|Classic/g, '').trim();
+        console.log(`🔍 Searching Pexels for query: "${searchQuery}"`);
+
+        const photos = await searchPexels(searchQuery, 40); // Fetch more per page
+
+        // Randomize search results for variety
+        const shuffled = photos.sort(() => 0.5 - Math.random());
+
+        for (const photo of shuffled) {
             if (!usedImageIds.has(photo.id)) {
                 usedImageIds.add(photo.id);
-                return photo.src.medium;
+                return photo.src.large; // Use large for better quality
             }
         }
     }
 
-    // 2. Fallback to category-based search
+    // 2. Fallback to category-based search with randomization
     const queries = categorySearchQueries[category] || categorySearchQueries['default'];
     const query = queries[index % queries.length];
-    console.log(`🔍 Searching Pexels for category query: "${query}"`);
-    const photos = await searchPexels(query, 10);
+    console.log(`🔍 Searching Pexels for fallback category query: "${query}"`);
+    const photos = await searchPexels(query, 80); // Maximum fetch for fallback
 
-    for (const photo of photos) {
+    const shuffledFallback = photos.sort(() => 0.5 - Math.random());
+    for (const photo of shuffledFallback) {
         if (!usedImageIds.has(photo.id)) {
             usedImageIds.add(photo.id);
-            return photo.src.medium;
+            return photo.src.large;
         }
     }
 
