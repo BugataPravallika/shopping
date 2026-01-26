@@ -83,14 +83,15 @@ const fallbackImages = {
 /**
  * Search Pexels for images matching a query
  * 
- * @param {string} query - Search term (e.g., "laptop computer")
- * @param {number} perPage - Number of results to fetch (max 80)
+ * @param {string} query - Search term
+ * @param {number} perPage - Number of results to fetch
+ * @param {number} page - Page number
  * @returns {Promise<Array>} - Array of image objects
  */
-async function searchPexels(query, perPage = 15) {
+async function searchPexels(query, perPage = 80, page = 1) {
     try {
         const response = await fetch(
-            `${PEXELS_BASE_URL}/search?query=${encodeURIComponent(query)}&per_page=${perPage}&orientation=landscape`,
+            `${PEXELS_BASE_URL}/search?query=${encodeURIComponent(query)}&per_page=${perPage}&page=${page}&orientation=landscape`,
             {
                 headers: {
                     'Authorization': PEXELS_API_KEY
@@ -114,36 +115,40 @@ async function searchPexels(query, perPage = 15) {
 /**
  * Get a unique image for a product
  * 
- * @param {string} category - Product category (e.g., "Electronics")
- * @param {string} name - Product name (e.g., "Dell Laptop")
- * @param {number} index - Product index (for variety)
+ * @param {string} category - Product category
+ * @param {string} name - Product name
+ * @param {number} index - Product index
  * @returns {Promise<string>} - Image URL
  */
 export async function getImageForCategory(category, name = '', index = 0) {
     // 1. Try searching by Product Name for maximum relevance
     if (name) {
-        // Clean up name for better search (remove brand if it's too specific)
         const searchQuery = name.split(' - ')[0].replace(/Compact|Modern|Stylish|High-Performance|Elegant|Premium|Durable|Classic/g, '').trim();
-        console.log(`🔍 Searching Pexels for query: "${searchQuery}"`);
+        console.log(`🔍 Searching Pexels for query: "${searchQuery}" (Page ${Math.floor(index / 5) + 1})`);
 
-        const photos = await searchPexels(searchQuery, 40); // Fetch more per page
+        // Use a semi-random page based on index to get different sets of images for similar names
+        const page = Math.floor(index / 10) + 1;
+        const photos = await searchPexels(searchQuery, 40, page);
 
-        // Randomize search results for variety
         const shuffled = photos.sort(() => 0.5 - Math.random());
 
         for (const photo of shuffled) {
             if (!usedImageIds.has(photo.id)) {
                 usedImageIds.add(photo.id);
-                return photo.src.large; // Use large for better quality
+                return photo.src.large;
             }
         }
     }
 
-    // 2. Fallback to category-based search with randomization
+    // 2. Fallback to category-based search with randomized paging
     const queries = categorySearchQueries[category] || categorySearchQueries['default'];
     const query = queries[index % queries.length];
-    console.log(`🔍 Searching Pexels for fallback category query: "${query}"`);
-    const photos = await searchPexels(query, 80); // Maximum fetch for fallback
+
+    // Pick a random page between 1-5 for fallback queries to ensure variety
+    const randomPage = Math.floor(Math.random() * 5) + 1;
+    console.log(`🔍 Searching Pexels for fallback category query: "${query}" (Page ${randomPage})`);
+
+    const photos = await searchPexels(query, 80, randomPage);
 
     const shuffledFallback = photos.sort(() => 0.5 - Math.random());
     for (const photo of shuffledFallback) {
