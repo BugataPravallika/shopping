@@ -13,6 +13,7 @@ import orderRoutes from './routes/orderRoutes.js';
 import uploadRoutes from './routes/uploadRoutes.js';
 import wishlistRoutes from './routes/wishlistRoutes.js';
 import cartRoutes from './routes/cartRoutes.js';
+import couponRoutes from './routes/couponRoutes.js';
 import { notFound, errorHandler } from './middleware/errorMiddleware.js';
 import User from './models/userModel.js';
 import Product from './models/productModel.js';
@@ -74,6 +75,7 @@ const startServer = async () => {
     app.use('/api/upload', uploadRoutes);
     app.use('/api/wishlist', wishlistRoutes);
     app.use('/api/cart', cartRoutes);
+    app.use('/api/coupons', couponRoutes);
 
     app.get('/api/config/paypal', (req, res) =>
       res.send({ clientId: process.env.PAYPAL_CLIENT_ID })

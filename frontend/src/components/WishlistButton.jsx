@@ -39,7 +39,6 @@ const WishlistButton = ({ productId }) => {
         await addToWishlist(productId).unwrap();
         toast.success('Added to wishlist');
       }
-      setIsInWishlist(!isInWishlist);
     } catch (err) {
       toast.error(err?.data?.message || err.error);
     }

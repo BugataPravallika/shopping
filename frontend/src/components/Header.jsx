@@ -120,6 +120,7 @@ const Header = () => {
                       className="absolute right-0 mt-2 w-48 bg-white/90 backdrop-blur-md rounded-xl shadow-lg border border-white/50 py-1 overflow-hidden"
                       onMouseLeave={() => setDropdownOpen(null)}
                     >
+                      <Link to='/admin/dashboard' className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => setDropdownOpen(null)}>Dashboard</Link>
                       <Link to='/admin/productlist' className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => setDropdownOpen(null)}>Products</Link>
                       <Link to='/admin/orderlist' className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => setDropdownOpen(null)}>Orders</Link>
                       <Link to='/admin/userlist' className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" onClick={() => setDropdownOpen(null)}>Users</Link>
@@ -175,6 +176,7 @@ const Header = () => {
                   {userInfo.isAdmin && (
                     <div className="border-t border-gray-100 pt-2">
                       <p className="text-xs text-gray-400 uppercase font-bold tracking-wider mb-2">Admin</p>
+                      <Link to='/admin/dashboard' className="block py-2 text-gray-700" onClick={() => setIsOpen(false)}>Dashboard</Link>
                       <Link to='/admin/productlist' className="block py-2 text-gray-700" onClick={() => setIsOpen(false)}>Products</Link>
                       <Link to='/admin/orderlist' className="block py-2 text-gray-700" onClick={() => setIsOpen(false)}>Orders</Link>
                       <Link to='/admin/userlist' className="block py-2 text-gray-700" onClick={() => setIsOpen(false)}>Users</Link>

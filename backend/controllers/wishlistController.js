@@ -6,7 +6,9 @@ import User from '../models/userModel.js';
 // @access  Private
 const getWishlist = asyncHandler(async (req, res) => {
   const user = await User.findById(req.user._id).populate('wishlist');
-  res.json(user.wishlist);
+  // Filter out any products that might have been deleted but are still in the wishlist
+  const wishlist = user.wishlist.filter(item => item !== null);
+  res.json(wishlist);
 });
 
 // @desc    Add product to wishlist
@@ -14,9 +16,14 @@ const getWishlist = asyncHandler(async (req, res) => {
 // @access  Private
 const addToWishlist = asyncHandler(async (req, res) => {
   const user = await User.findById(req.user._id);
+
+  if (!user.wishlist) {
+    user.wishlist = [];
+  }
+
   const productId = req.params.id;
 
-  if (user.wishlist.includes(productId)) {
+  if (user.wishlist.some(id => id.toString() === productId)) {
     res.status(400);
     throw new Error('Product already in wishlist');
   }

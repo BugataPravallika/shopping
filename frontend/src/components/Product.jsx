@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import Rating from './Rating';
 import WishlistButton from './WishlistButton';
-import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { FaShoppingCart, FaEye } from 'react-icons/fa';
 import { addToCart } from '../slices/cartSlice';
@@ -9,7 +8,6 @@ import { toast } from 'react-toastify';
 
 const Product = ({ product }) => {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
 
   const addToCartHandler = () => {
     dispatch(addToCart({ ...product, qty: 1 }));

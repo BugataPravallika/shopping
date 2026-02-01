@@ -7,6 +7,7 @@ import Message from '../components/Message';
 import CheckoutSteps from '../components/CheckoutSteps';
 import Loader from '../components/Loader';
 import { useCreateOrderMutation } from '../slices/ordersApiSlice';
+import { useLazyGetCouponByCodeQuery } from '../slices/couponsApiSlice';
 import { clearCartItems } from '../slices/cartSlice';
 
 const PlaceOrderScreen = () => {
@@ -17,16 +18,22 @@ const PlaceOrderScreen = () => {
   const [discount, setDiscount] = useState(0);
 
   const [createOrder, { isLoading, error }] = useCreateOrderMutation();
+  const [getCoupon] = useLazyGetCouponByCodeQuery();
 
-  const applyCouponHandler = () => {
-    if (coupon === 'WELCOME10') {
-      setDiscount(10);
-      toast.success('Coupon Applied: ₹10 Off');
-    } else if (coupon === 'FESTIVE200') {
-      setDiscount(200);
-      toast.success('Coupon Applied: ₹200 Off');
-    } else {
-      toast.error('Invalid Coupon');
+  const applyCouponHandler = async () => {
+    if (!coupon) return;
+    try {
+      const res = await getCoupon(coupon).unwrap();
+      if (res.isPercentage) {
+        const discountAmount = (cart.totalPrice * res.discount) / 100;
+        setDiscount(discountAmount);
+        toast.success(`Coupon Applied: ${res.discount}% Off`);
+      } else {
+        setDiscount(res.discount);
+        toast.success(`Coupon Applied: ₹${res.discount} Off`);
+      }
+    } catch (err) {
+      toast.error(err?.data?.message || err.error);
     }
   };
 

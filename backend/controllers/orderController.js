@@ -210,6 +210,96 @@ const getOrders = asyncHandler(async (req, res) => {
   res.json(orders);
 });
 
+// @desc    Cancel an order (and restore stock)
+// @route   PUT /api/orders/:id/cancel
+// @access  Private
+const cancelOrder = asyncHandler(async (req, res) => {
+  const order = await Order.findById(req.params.id);
+
+  if (order) {
+    if (order.isDelivered) {
+      res.status(400);
+      throw new Error('Cannot cancel a delivered order');
+    }
+
+    // Restore stock for each product
+    for (const item of order.orderItems) {
+      const product = await Product.findById(item.product);
+      if (product) {
+        product.countInStock += item.qty;
+        await product.save();
+      }
+    }
+
+    order.isCancelled = true; // Note: Need to add this to model if not exists
+    await order.save();
+    res.json({ message: 'Order cancelled and stock restored' });
+  } else {
+    res.status(404);
+    throw new Error('Order not found');
+  }
+});
+
+// @desc    Get order summary (Analytics)
+// @route   GET /api/orders/summary
+// @access  Private/Admin
+const getOrderSummary = asyncHandler(async (req, res) => {
+  // Aggregate 1: Total Sales, Revenue, Average Order Value
+  const orders = await Order.aggregate([
+    {
+      $group: {
+        _id: null,
+        numOrders: { $sum: 1 },
+        totalSales: { $sum: '$totalPrice' },
+      },
+    },
+  ]);
+
+  // Aggregate 2: Sales by Month (last 30 days daily)
+  const dailySales = await Order.aggregate([
+    {
+      $match: {
+        createdAt: {
+          $gte: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000),
+        },
+      },
+    },
+    {
+      $group: {
+        _id: { $dateToString: { format: '%Y-%m-%d', date: '$createdAt' } },
+        sales: { $sum: '$totalPrice' },
+      },
+    },
+    { $sort: { _id: 1 } },
+  ]);
+
+  // Aggregate 3: Sales by Category
+  const categorySales = await Order.aggregate([
+    { $unwind: '$orderItems' },
+    {
+      $lookup: {
+        from: 'products',
+        localField: 'orderItems.product',
+        foreignField: '_id',
+        as: 'productDetails',
+      },
+    },
+    { $unwind: '$productDetails' },
+    {
+      $group: {
+        _id: '$productDetails.category',
+        sales: { $sum: { $multiply: ['$orderItems.price', '$orderItems.qty'] } },
+      },
+    },
+  ]);
+
+  res.send({
+    orders: orders[0] || { numOrders: 0, totalSales: 0 },
+    dailySales,
+    categorySales,
+  });
+});
+
 export {
   addOrderItems,
   getMyOrders,
@@ -218,4 +308,6 @@ export {
   updateOrderToPaidAdmin,
   updateOrderToDelivered,
   getOrders,
+  getOrderSummary,
+  cancelOrder,
 };
