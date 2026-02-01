@@ -5,10 +5,10 @@ import Coupon from './models/couponModel.js';
 import connectDB from './config/db.js';
 
 dotenv.config();
-connectDB();
 
 const seedCoupons = async () => {
     try {
+        await connectDB();
         await Coupon.deleteMany();
 
         const coupons = [

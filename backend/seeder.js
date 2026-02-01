@@ -6,6 +6,7 @@ import products from './data/products.js';
 import User from './models/userModel.js';
 import Product from './models/productModel.js';
 import Order from './models/orderModel.js';
+import Coupon from './models/couponModel.js';
 import connectDB from './config/db.js';
 
 dotenv.config();
@@ -20,6 +21,31 @@ const importData = async () => {
     await Order.deleteMany();
     await Product.deleteMany();
     await User.deleteMany();
+    await Coupon.deleteMany();
+
+    // Seed Coupons
+    const coupons = [
+      {
+        code: 'SDE2026',
+        discount: 500,
+        isPercentage: false,
+        expiryDate: new Date('2026-12-31'),
+      },
+      {
+        code: 'WELCOME10',
+        discount: 10,
+        isPercentage: true,
+        expiryDate: new Date('2026-12-31'),
+      },
+      {
+        code: 'ANTIGRAVITY',
+        discount: 99,
+        isPercentage: true,
+        expiryDate: new Date('2026-12-31'),
+      },
+    ];
+    await Coupon.insertMany(coupons);
+    console.log('Coupons Imported!'.blue.inverse);
 
     const createdUsers = await User.insertMany(users);
 
@@ -50,6 +76,7 @@ const destroyData = async () => {
     await Order.deleteMany();
     await Product.deleteMany();
     await User.deleteMany();
+    await Coupon.deleteMany();
 
     console.log('Data Destroyed!'.red.inverse);
     process.exit();
