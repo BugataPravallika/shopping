@@ -12,6 +12,8 @@
     "data:import": "node backend/seeder",
     "data:pexels": "node backend/seedWithPexels.js",
     "data:destroy": "node backend/seeder -d",
+    "data:coupons": "node backend/couponSeeder.js",
+    "data:all": "npm run data:import && npm run data:coupons",
     "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
     "generate-toc": "markdown-toc -i readme.md"
   },

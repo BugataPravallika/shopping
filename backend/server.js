@@ -50,7 +50,11 @@ const seedDatabase = async () => {
 const startServer = async () => {
   try {
     await connectDB();
-    await seedDatabase();
+
+    // Only seed database in development
+    if (process.env.NODE_ENV !== 'production') {
+      await seedDatabase();
+    }
 
     const app = express();
 
