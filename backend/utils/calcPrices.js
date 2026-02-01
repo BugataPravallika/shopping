@@ -7,7 +7,7 @@ function addDecimals(num) {
 // Our addDecimals function expects a number and returns a string, so it is not
 // correct to call it passing a string as the argument.
 
-export function calcPrices(orderItems) {
+export function calcPrices(orderItems, discount = 0) {
   // Calculate the items price in whole number (pennies) to avoid issues with
   // floating point number calculations
   const itemsPrice = orderItems.reduce(
@@ -21,8 +21,9 @@ export function calcPrices(orderItems) {
   // Calculate the tax price
   const taxPrice = 0.15 * itemsPrice;
 
-  // Calculate the total price
-  const totalPrice = itemsPrice + shippingPrice + taxPrice;
+  // Calculate the total price including discount
+  // Ensure totalPrice doesn't go below 0
+  const totalPrice = Math.max(0, itemsPrice + shippingPrice + taxPrice - discount);
 
   // return prices as strings fixed to 2 decimal places
   return {
