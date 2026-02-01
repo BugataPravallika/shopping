@@ -728,20 +728,6 @@ const products = [
     "user": "ADMIN_USER_ID_PLACEHOLDER"
   },
   {
-    "name": "Caprese Modern Heels - Fashion",
-    "image": "https://images.unsplash.com/photo-1594223274512-ad4803739b7c?w=640",
-    "brand": "Caprese",
-    "category": "Fashion - Women",
-    "description": "Experience the best quality with Caprese Modern Heels - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
-    "price": 4230,
-    "countInStock": 21,
-    "rating": 4,
-    "numReviews": 172,
-    "isFeatured": true,
-    "badge": "New",
-    "user": "ADMIN_USER_ID_PLACEHOLDER"
-  },
-  {
     "name": "H&M Modern Kurti - Fashion",
     "image": "https://images.unsplash.com/photo-1543076447-215ad9ba6923?w=640",
     "brand": "H&M",
@@ -963,20 +949,6 @@ const products = [
     "numReviews": 287,
     "isFeatured": false,
     "badge": "Trending",
-    "user": "ADMIN_USER_ID_PLACEHOLDER"
-  },
-  {
-    "name": "Lilliput Stylish School Bag - Fashion",
-    "image": "https://images.unsplash.com/photo-1566206091558-7f218b696731?w=640",
-    "brand": "Lilliput",
-    "category": "Fashion - Kids",
-    "description": "Experience the best quality with Lilliput Stylish School Bag - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
-    "price": 4853,
-    "countInStock": 25,
-    "rating": 4,
-    "numReviews": 264,
-    "isFeatured": false,
-    "badge": "New",
     "user": "ADMIN_USER_ID_PLACEHOLDER"
   },
   {
@@ -1453,20 +1425,6 @@ const products = [
     "numReviews": 252,
     "isFeatured": false,
     "badge": "New",
-    "user": "ADMIN_USER_ID_PLACEHOLDER"
-  },
-  {
-    "name": "Mamaearth Durable Conditioner - Beauty",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
-    "brand": "Mamaearth",
-    "category": "Beauty & Personal Care",
-    "description": "Experience the best quality with Mamaearth Durable Conditioner - Beauty. Perfect for daily use and designed to last long. Highly rated by customers.",
-    "price": 15236,
-    "countInStock": 7,
-    "rating": 3.5,
-    "numReviews": 151,
-    "isFeatured": false,
-    "badge": "Limited Stock",
     "user": "ADMIN_USER_ID_PLACEHOLDER"
   },
   {
@@ -2450,20 +2408,6 @@ const products = [
     "user": "ADMIN_USER_ID_PLACEHOLDER"
   },
   {
-    "name": "Maybelline Classic Matte Lipstick - Makeup",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
-    "brand": "Maybelline",
-    "category": "Makeup & Cosmetics",
-    "description": "Experience the best quality with Maybelline Classic Matte Lipstick - Makeup. Perfect for daily use and designed to last long. Highly rated by customers.",
-    "price": 12994,
-    "countInStock": 45,
-    "rating": 4.7,
-    "numReviews": 367,
-    "isFeatured": false,
-    "badge": "None",
-    "user": "ADMIN_USER_ID_PLACEHOLDER"
-  },
-  {
     "name": "Maybelline High-Performance Mascara - Makeup",
     "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
     "brand": "Maybelline",
@@ -2730,20 +2674,6 @@ const products = [
     "user": "ADMIN_USER_ID_PLACEHOLDER"
   },
   {
-    "name": "Chumbak Durable Fashion Backpack - Girls",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
-    "brand": "Chumbak",
-    "category": "Girls Lifestyle",
-    "description": "Experience the best quality with Chumbak Durable Fashion Backpack - Girls. Perfect for daily use and designed to last long. Highly rated by customers.",
-    "price": 7579,
-    "countInStock": 8,
-    "rating": 4.9,
-    "numReviews": 166,
-    "isFeatured": false,
-    "badge": "New",
-    "user": "ADMIN_USER_ID_PLACEHOLDER"
-  },
-  {
     "name": "Miniso Modern Kawaii Diary - Girls",
     "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
     "brand": "Miniso",
@@ -2825,20 +2755,6 @@ const products = [
     "numReviews": 319,
     "isFeatured": true,
     "badge": "None",
-    "user": "ADMIN_USER_ID_PLACEHOLDER"
-  },
-  {
-    "name": "Fastrack Compact Wrist Band - Boys",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
-    "brand": "Fastrack",
-    "category": "Boys Lifestyle",
-    "description": "Experience the best quality with Fastrack Compact Wrist Band - Boys. Perfect for daily use and designed to last long. Highly rated by customers.",
-    "price": 3056,
-    "countInStock": 26,
-    "rating": 3.7,
-    "numReviews": 122,
-    "isFeatured": false,
-    "badge": "New",
     "user": "ADMIN_USER_ID_PLACEHOLDER"
   },
   {
