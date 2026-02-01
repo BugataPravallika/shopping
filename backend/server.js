@@ -50,6 +50,9 @@ const seedDatabase = async () => {
 const startServer = async () => {
   try {
     await connectDB();
+    const pCount = await Product.countDocuments();
+    const uCount = await User.countDocuments();
+    console.log(`>>> DB Connected. Products: ${pCount}, Users: ${uCount}`);
 
     // Only seed database in development
     if (process.env.NODE_ENV !== 'production') {
@@ -58,14 +61,9 @@ const startServer = async () => {
 
     const app = express();
 
-    // Configure CORS
+    // Configure CORS - Allow all origins for debugging during deployment
     app.use(cors({
-      origin: [
-        'http://localhost:3000',
-        'https://shopping-git-main-pravallikabugatas-projects.vercel.app',
-        'https://shopping.vercel.app',
-        'https://shopping-mwyez34bh-pravallikabugatas-projects.vercel.app'
-      ],
+      origin: true, // Allow all origins
       credentials: true,
     }));
 

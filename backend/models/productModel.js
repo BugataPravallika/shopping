@@ -26,6 +26,7 @@ const productSchema = mongoose.Schema(
     name: {
       type: String,
       required: true,
+      unique: true, // Prevent actual duplicates
     },
     image: {
       type: String,
