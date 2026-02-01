@@ -20,11 +20,11 @@ const getProducts = asyncHandler(async (req, res) => {
   // Build search query
   const keyword = req.query.keyword
     ? {
-        name: {
-          $regex: req.query.keyword,
-          $options: 'i',
-        },
-      }
+      name: {
+        $regex: req.query.keyword,
+        $options: 'i',
+      },
+    }
     : {};
 
   const category = req.query.category ? { category: req.query.category } : {};
@@ -68,7 +68,7 @@ const getProducts = asyncHandler(async (req, res) => {
 
   // Fetch products with pagination and sorting
   const products = await Product.find(query)
-    .sort(sortBy)
+    .sort({ ...sortBy, _id: 1 })
     .limit(pageSize)
     .skip(pageSize * (page - 1));
 
