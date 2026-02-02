@@ -1,9 +1,6 @@
 // Use environment variable for production, otherwise empty for proxy
-let apiUrl = process.env.REACT_APP_API_URL || '';
-if (apiUrl && !apiUrl.startsWith('http')) {
-    apiUrl = `https://${apiUrl}`;
-}
-export const BASE_URL = apiUrl;
+// If using monolithic Render, this should be empty/unset
+export const BASE_URL = process.env.REACT_APP_API_URL || '';
 
 export const PRODUCTS_URL = '/api/products';
 export const USERS_URL = '/api/users';
