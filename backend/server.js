@@ -19,6 +19,9 @@ import User from './models/userModel.js';
 import Product from './models/productModel.js';
 import users from './data/users.js';
 import products from './data/products.js';
+import coupons from './data/coupons.js';
+import Coupon from './models/couponModel.js';
+import Order from './models/orderModel.js';
 
 const port = process.env.PORT || 5000;
 
@@ -26,8 +29,13 @@ const port = process.env.PORT || 5000;
 const seedDatabase = async () => {
   try {
     const userCount = await User.countDocuments();
-    if (userCount === 0) {
-      console.log('Seeding database...');
+    const productCount = await Product.countDocuments();
+    const couponCount = await Coupon.countDocuments();
+    const forceSeed = process.env.FORCE_SEED === 'true';
+
+    if (userCount === 0 || productCount === 0 || forceSeed) {
+      console.log('🔄 Seeding database (Products & Users)...'.yellow);
+      await Order.deleteMany();
       await User.deleteMany();
       await Product.deleteMany();
 
@@ -39,10 +47,17 @@ const seedDatabase = async () => {
       });
 
       await Product.insertMany(sampleProducts);
-      console.log('Database seeded successfully!');
+      console.log('✅ Products & Users seeded successfully!'.green);
+    }
+
+    if (couponCount === 0 || forceSeed) {
+      console.log('🎟️ Seeding database (Coupons)...'.yellow);
+      await Coupon.deleteMany();
+      await Coupon.insertMany(coupons);
+      console.log('✅ Coupons seeded successfully!'.green);
     }
   } catch (error) {
-    console.error('Error seeding database:', error);
+    console.error('❌ Error seeding database:', error);
   }
 };
 

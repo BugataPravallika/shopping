@@ -9,6 +9,8 @@ import Order from './models/orderModel.js';
 import Coupon from './models/couponModel.js';
 import connectDB from './config/db.js';
 
+import coupons from './data/coupons.js';
+
 dotenv.config();
 
 // connectDB(); // Removed top-level call
@@ -24,26 +26,6 @@ const importData = async () => {
     await Coupon.deleteMany();
 
     // Seed Coupons
-    const coupons = [
-      {
-        code: 'SDE2026',
-        discount: 500,
-        isPercentage: false,
-        expiryDate: new Date('2026-12-31'),
-      },
-      {
-        code: 'WELCOME10',
-        discount: 10,
-        isPercentage: true,
-        expiryDate: new Date('2026-12-31'),
-      },
-      {
-        code: 'ANTIGRAVITY',
-        discount: 99,
-        isPercentage: true,
-        expiryDate: new Date('2026-12-31'),
-      },
-    ];
     await Coupon.insertMany(coupons);
     console.log('Coupons Imported!'.blue.inverse);
 
