@@ -54,10 +54,8 @@ const startServer = async () => {
     const uCount = await User.countDocuments();
     console.log(`>>> DB Connected. Products: ${pCount}, Users: ${uCount}`);
 
-    // Only seed database in development
-    if (process.env.NODE_ENV !== 'production') {
-      await seedDatabase();
-    }
+    // Check and seed database if empty (safe for production cold starts)
+    await seedDatabase();
 
     const app = express();
 
