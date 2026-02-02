@@ -1,7 +1,7 @@
 const products = [
   {
     "name": "Dell High-Performance Laptop - Electronics",
-    "image": "/images/products/laptop.png",
+    "image": "https://picsum.photos/seed/dell-high-performance-laptop-electronics/640/480",
     "brand": "Dell",
     "category": "Electronics",
     "description": "Experience the best quality with Dell High-Performance Laptop - Electronics. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -15,7 +15,7 @@ const products = [
   },
   {
     "name": "Sony High-Performance Wireless Mouse - Electronics",
-    "image": "/images/products/mouse.png",
+    "image": "https://picsum.photos/seed/sony-high-performance-wireless-mouse-electronics/640/480",
     "brand": "Sony",
     "category": "Electronics",
     "description": "Experience the best quality with Sony High-Performance Wireless Mouse - Electronics. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -29,7 +29,7 @@ const products = [
   },
   {
     "name": "Boat Compact Smartwatch - Electronics",
-    "image": "/images/products/smartwatch.png",
+    "image": "https://picsum.photos/seed/boat-compact-smartwatch-electronics/640/480",
     "brand": "Boat",
     "category": "Electronics",
     "description": "Experience the best quality with Boat Compact Smartwatch - Electronics. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -43,7 +43,7 @@ const products = [
   },
   {
     "name": "JBL Modern Smartphone - Electronics",
-    "image": "/images/products/phone.png",
+    "image": "https://picsum.photos/seed/jbl-modern-smartphone-electronics/640/480",
     "brand": "JBL",
     "category": "Electronics",
     "description": "Experience the best quality with JBL Modern Smartphone - Electronics. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -57,7 +57,7 @@ const products = [
   },
   {
     "name": "OnePlus Premium Headphones - Electronics",
-    "image": "/images/products/headphones.png",
+    "image": "https://picsum.photos/seed/oneplus-premium-headphones-electronics/640/480",
     "brand": "OnePlus",
     "category": "Electronics",
     "description": "Experience the best quality with OnePlus Premium Headphones - Electronics. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -71,7 +71,7 @@ const products = [
   },
   {
     "name": "Dell High-Performance Fast Charger - Electronics",
-    "image": "/images/products/electronics_fast_charger.png",
+    "image": "https://picsum.photos/seed/dell-high-performance-fast-charger-electronics/640/480",
     "brand": "Dell",
     "category": "Electronics",
     "description": "Experience the best quality with Dell High-Performance Fast Charger - Electronics. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -85,7 +85,7 @@ const products = [
   },
   {
     "name": "OnePlus Durable Headphones - Electronics",
-    "image": "/images/products/headphones.png",
+    "image": "https://picsum.photos/seed/oneplus-durable-headphones-electronics/640/480",
     "brand": "OnePlus",
     "category": "Electronics",
     "description": "Experience the best quality with OnePlus Durable Headphones - Electronics. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -99,7 +99,7 @@ const products = [
   },
   {
     "name": "Apple High-Performance Wireless Mouse - Electronics",
-    "image": "/images/products/mouse.png",
+    "image": "https://picsum.photos/seed/apple-high-performance-wireless-mouse-electronics/640/480",
     "brand": "Apple",
     "category": "Electronics",
     "description": "Experience the best quality with Apple High-Performance Wireless Mouse - Electronics. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -113,7 +113,7 @@ const products = [
   },
   {
     "name": "Apple Classic Headphones - Electronics",
-    "image": "/images/products/headphones.png",
+    "image": "https://picsum.photos/seed/apple-classic-headphones-electronics/640/480",
     "brand": "Apple",
     "category": "Electronics",
     "description": "Experience the best quality with Apple Classic Headphones - Electronics. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -127,7 +127,7 @@ const products = [
   },
   {
     "name": "OnePlus High-Performance Laptop - Electronics",
-    "image": "/images/products/laptop.png",
+    "image": "https://picsum.photos/seed/oneplus-high-performance-laptop-electronics/640/480",
     "brand": "OnePlus",
     "category": "Electronics",
     "description": "Experience the best quality with OnePlus High-Performance Laptop - Electronics. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -141,7 +141,7 @@ const products = [
   },
   {
     "name": "Samsung Elegant Smartphone - Electronics",
-    "image": "/images/products/phone.png",
+    "image": "https://picsum.photos/seed/samsung-elegant-smartphone-electronics/640/480",
     "brand": "Samsung",
     "category": "Electronics",
     "description": "Experience the best quality with Samsung Elegant Smartphone - Electronics. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -155,7 +155,7 @@ const products = [
   },
   {
     "name": "OnePlus Classic Wireless Mouse - Electronics",
-    "image": "/images/products/mouse.png",
+    "image": "https://picsum.photos/seed/oneplus-classic-wireless-mouse-electronics/640/480",
     "brand": "OnePlus",
     "category": "Electronics",
     "description": "Experience the best quality with OnePlus Classic Wireless Mouse - Electronics. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -169,7 +169,7 @@ const products = [
   },
   {
     "name": "Apple Durable Keyboard - Electronics",
-    "image": "/images/products/keyboard.png",
+    "image": "https://picsum.photos/seed/apple-durable-keyboard-electronics/640/480",
     "brand": "Apple",
     "category": "Electronics",
     "description": "Experience the best quality with Apple Durable Keyboard - Electronics. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -183,7 +183,7 @@ const products = [
   },
   {
     "name": "Boat High-Performance Keyboard - Electronics",
-    "image": "/images/products/keyboard.png",
+    "image": "https://picsum.photos/seed/boat-high-performance-keyboard-electronics/640/480",
     "brand": "Boat",
     "category": "Electronics",
     "description": "Experience the best quality with Boat High-Performance Keyboard - Electronics. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -197,7 +197,7 @@ const products = [
   },
   {
     "name": "OnePlus Premium Fast Charger - Electronics",
-    "image": "/images/products/electronics_fast_charger.png",
+    "image": "https://picsum.photos/seed/oneplus-premium-fast-charger-electronics/640/480",
     "brand": "OnePlus",
     "category": "Electronics",
     "description": "Experience the best quality with OnePlus Premium Fast Charger - Electronics. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -211,7 +211,7 @@ const products = [
   },
   {
     "name": "OnePlus Premium Keyboard - Electronics",
-    "image": "/images/products/keyboard.png",
+    "image": "https://picsum.photos/seed/oneplus-premium-keyboard-electronics/640/480",
     "brand": "OnePlus",
     "category": "Electronics",
     "description": "Experience the best quality with OnePlus Premium Keyboard - Electronics. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -225,7 +225,7 @@ const products = [
   },
   {
     "name": "OnePlus Durable Fast Charger - Electronics",
-    "image": "/images/products/electronics_fast_charger.png",
+    "image": "https://picsum.photos/seed/oneplus-durable-fast-charger-electronics/640/480",
     "brand": "OnePlus",
     "category": "Electronics",
     "description": "Experience the best quality with OnePlus Durable Fast Charger - Electronics. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -239,7 +239,7 @@ const products = [
   },
   {
     "name": "HP Premium Keyboard - Electronics",
-    "image": "/images/products/keyboard.png",
+    "image": "https://picsum.photos/seed/hp-premium-keyboard-electronics/640/480",
     "brand": "HP",
     "category": "Electronics",
     "description": "Experience the best quality with HP Premium Keyboard - Electronics. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -253,7 +253,7 @@ const products = [
   },
   {
     "name": "Adidas Compact Jeans - Fashion",
-    "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=640",
+    "image": "https://picsum.photos/seed/adidas-compact-jeans-fashion/640/480",
     "brand": "Adidas",
     "category": "Fashion - Men",
     "description": "Experience the best quality with Adidas Compact Jeans - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -267,7 +267,7 @@ const products = [
   },
   {
     "name": "Levis Stylish Analog Watch - Fashion",
-    "image": "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=640",
+    "image": "https://picsum.photos/seed/levis-stylish-analog-watch-fashion/640/480",
     "brand": "Levis",
     "category": "Fashion - Men",
     "description": "Experience the best quality with Levis Stylish Analog Watch - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -281,7 +281,7 @@ const products = [
   },
   {
     "name": "Fossil Elegant Jeans - Fashion",
-    "image": "https://images.unsplash.com/photo-1516257984-b1b4d707412e?w=640",
+    "image": "https://picsum.photos/seed/fossil-elegant-jeans-fashion/640/480",
     "brand": "Fossil",
     "category": "Fashion - Men",
     "description": "Experience the best quality with Fossil Elegant Jeans - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -295,7 +295,7 @@ const products = [
   },
   {
     "name": "Puma Premium Casual Shirt - Fashion",
-    "image": "https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?w=640",
+    "image": "https://picsum.photos/seed/puma-premium-casual-shirt-fashion/640/480",
     "brand": "Puma",
     "category": "Fashion - Men",
     "description": "Experience the best quality with Puma Premium Casual Shirt - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -309,7 +309,7 @@ const products = [
   },
   {
     "name": "Raymond High-Performance Analog Watch - Fashion",
-    "image": "https://images.unsplash.com/photo-1622470953794-aa9c70b0fb9d?w=640",
+    "image": "https://picsum.photos/seed/raymond-high-performance-analog-watch-fashion/640/480",
     "brand": "Raymond",
     "category": "Fashion - Men",
     "description": "Experience the best quality with Raymond High-Performance Analog Watch - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -323,7 +323,7 @@ const products = [
   },
   {
     "name": "Allen Solly Elegant Running Shoes - Fashion",
-    "image": "https://images.unsplash.com/photo-1542272604-787c3835535d?w=640",
+    "image": "https://picsum.photos/seed/allen-solly-elegant-running-shoes-fashion/640/480",
     "brand": "Allen Solly",
     "category": "Fashion - Men",
     "description": "Experience the best quality with Allen Solly Elegant Running Shoes - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -337,7 +337,7 @@ const products = [
   },
   {
     "name": "Nike Elegant Jeans - Fashion",
-    "image": "https://images.unsplash.com/photo-1463100099107-aa0980c362e6?w=640",
+    "image": "https://picsum.photos/seed/nike-elegant-jeans-fashion/640/480",
     "brand": "Nike",
     "category": "Fashion - Men",
     "description": "Experience the best quality with Nike Elegant Jeans - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -351,7 +351,7 @@ const products = [
   },
   {
     "name": "Allen Solly Compact Analog Watch - Fashion",
-    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=640",
+    "image": "https://picsum.photos/seed/allen-solly-compact-analog-watch-fashion/640/480",
     "brand": "Allen Solly",
     "category": "Fashion - Men",
     "description": "Experience the best quality with Allen Solly Compact Analog Watch - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -365,7 +365,7 @@ const products = [
   },
   {
     "name": "Casio Premium Wallet - Fashion",
-    "image": "https://images.unsplash.com/photo-1543508282-6319a3e2621f?w=640",
+    "image": "https://picsum.photos/seed/casio-premium-wallet-fashion/640/480",
     "brand": "Casio",
     "category": "Fashion - Men",
     "description": "Experience the best quality with Casio Premium Wallet - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -379,7 +379,7 @@ const products = [
   },
   {
     "name": "Levis Premium Jeans - Fashion",
-    "image": "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=640",
+    "image": "https://picsum.photos/seed/levis-premium-jeans-fashion/640/480",
     "brand": "Levis",
     "category": "Fashion - Men",
     "description": "Experience the best quality with Levis Premium Jeans - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -393,7 +393,7 @@ const products = [
   },
   {
     "name": "Adidas High-Performance Sneakers - Fashion",
-    "image": "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=640",
+    "image": "https://picsum.photos/seed/adidas-high-performance-sneakers-fashion/640/480",
     "brand": "Adidas",
     "category": "Fashion - Men",
     "description": "Experience the best quality with Adidas High-Performance Sneakers - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -407,7 +407,7 @@ const products = [
   },
   {
     "name": "Puma Durable Analog Watch - Fashion",
-    "image": "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?w=640",
+    "image": "https://picsum.photos/seed/puma-durable-analog-watch-fashion/640/480",
     "brand": "Puma",
     "category": "Fashion - Men",
     "description": "Experience the best quality with Puma Durable Analog Watch - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -421,7 +421,7 @@ const products = [
   },
   {
     "name": "Allen Solly Compact Jeans - Fashion",
-    "image": "https://images.unsplash.com/photo-1516257984-b1b4d707412e?w=640",
+    "image": "https://picsum.photos/seed/allen-solly-compact-jeans-fashion/640/480",
     "brand": "Allen Solly",
     "category": "Fashion - Men",
     "description": "Experience the best quality with Allen Solly Compact Jeans - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -435,7 +435,7 @@ const products = [
   },
   {
     "name": "Levis Premium Belt - Fashion",
-    "image": "https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?w=640",
+    "image": "https://picsum.photos/seed/levis-premium-belt-fashion/640/480",
     "brand": "Levis",
     "category": "Fashion - Men",
     "description": "Experience the best quality with Levis Premium Belt - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -449,7 +449,7 @@ const products = [
   },
   {
     "name": "Casio Modern Wallet - Fashion",
-    "image": "https://images.unsplash.com/photo-1622470953794-aa9c70b0fb9d?w=640",
+    "image": "https://picsum.photos/seed/casio-modern-wallet-fashion/640/480",
     "brand": "Casio",
     "category": "Fashion - Men",
     "description": "Experience the best quality with Casio Modern Wallet - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -463,7 +463,7 @@ const products = [
   },
   {
     "name": "Allen Solly Compact Sneakers - Fashion",
-    "image": "https://images.unsplash.com/photo-1542272604-787c3835535d?w=640",
+    "image": "https://picsum.photos/seed/allen-solly-compact-sneakers-fashion/640/480",
     "brand": "Allen Solly",
     "category": "Fashion - Men",
     "description": "Experience the best quality with Allen Solly Compact Sneakers - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -477,7 +477,7 @@ const products = [
   },
   {
     "name": "Levis Premium Analog Watch - Fashion",
-    "image": "https://images.unsplash.com/photo-1463100099107-aa0980c362e6?w=640",
+    "image": "https://picsum.photos/seed/levis-premium-analog-watch-fashion/640/480",
     "brand": "Levis",
     "category": "Fashion - Men",
     "description": "Experience the best quality with Levis Premium Analog Watch - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -491,7 +491,7 @@ const products = [
   },
   {
     "name": "Adidas Durable Jeans - Fashion",
-    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=640",
+    "image": "https://picsum.photos/seed/adidas-durable-jeans-fashion/640/480",
     "brand": "Adidas",
     "category": "Fashion - Men",
     "description": "Experience the best quality with Adidas Durable Jeans - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -505,7 +505,7 @@ const products = [
   },
   {
     "name": "Metro Stylish Handbag - Fashion",
-    "image": "https://images.unsplash.com/photo-1543508282-6319a3e2621f?w=640",
+    "image": "https://picsum.photos/seed/metro-stylish-handbag-fashion/640/480",
     "brand": "Metro",
     "category": "Fashion - Women",
     "description": "Experience the best quality with Metro Stylish Handbag - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -519,7 +519,7 @@ const products = [
   },
   {
     "name": "Caprese Elegant Heels - Fashion",
-    "image": "https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?w=640",
+    "image": "https://picsum.photos/seed/caprese-elegant-heels-fashion/640/480",
     "brand": "Caprese",
     "category": "Fashion - Women",
     "description": "Experience the best quality with Caprese Elegant Heels - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -533,7 +533,7 @@ const products = [
   },
   {
     "name": "Biba Compact Sandals - Fashion",
-    "image": "https://images.unsplash.com/photo-1591369822096-ffd140ec948f?w=640",
+    "image": "https://picsum.photos/seed/biba-compact-sandals-fashion/640/480",
     "brand": "Biba",
     "category": "Fashion - Women",
     "description": "Experience the best quality with Biba Compact Sandals - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -547,7 +547,7 @@ const products = [
   },
   {
     "name": "Bata Premium Sandals - Fashion",
-    "image": "https://images.unsplash.com/photo-1495121605193-b116b5b9c5fe?w=640",
+    "image": "https://picsum.photos/seed/bata-premium-sandals-fashion/640/480",
     "brand": "Bata",
     "category": "Fashion - Women",
     "description": "Experience the best quality with Bata Premium Sandals - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -561,7 +561,7 @@ const products = [
   },
   {
     "name": "Caprese Modern Heels - Fashion",
-    "image": "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=640",
+    "image": "https://picsum.photos/seed/caprese-modern-heels-fashion/640/480",
     "brand": "Caprese",
     "category": "Fashion - Women",
     "description": "Experience the best quality with Caprese Modern Heels - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -575,7 +575,7 @@ const products = [
   },
   {
     "name": "Bata Durable Heels - Fashion",
-    "image": "https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=640",
+    "image": "https://picsum.photos/seed/bata-durable-heels-fashion/640/480",
     "brand": "Bata",
     "category": "Fashion - Women",
     "description": "Experience the best quality with Bata Durable Heels - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -589,7 +589,7 @@ const products = [
   },
   {
     "name": "Bata Classic Sandals - Fashion",
-    "image": "https://images.unsplash.com/photo-1594223274512-ad4803739b7c?w=640",
+    "image": "https://picsum.photos/seed/bata-classic-sandals-fashion/640/480",
     "brand": "Bata",
     "category": "Fashion - Women",
     "description": "Experience the best quality with Bata Classic Sandals - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -603,7 +603,7 @@ const products = [
   },
   {
     "name": "Metro Classic Floral Dress - Fashion",
-    "image": "https://images.unsplash.com/photo-1543076447-215ad9ba6923?w=640",
+    "image": "https://picsum.photos/seed/metro-classic-floral-dress-fashion/640/480",
     "brand": "Metro",
     "category": "Fashion - Women",
     "description": "Experience the best quality with Metro Classic Floral Dress - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -617,7 +617,7 @@ const products = [
   },
   {
     "name": "Biba Elegant Heels - Fashion",
-    "image": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=640",
+    "image": "https://picsum.photos/seed/biba-elegant-heels-fashion/640/480",
     "brand": "Biba",
     "category": "Fashion - Women",
     "description": "Experience the best quality with Biba Elegant Heels - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -631,7 +631,7 @@ const products = [
   },
   {
     "name": "Lavie Durable Jeans - Fashion",
-    "image": "https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=640",
+    "image": "https://picsum.photos/seed/lavie-durable-jeans-fashion/640/480",
     "brand": "Lavie",
     "category": "Fashion - Women",
     "description": "Experience the best quality with Lavie Durable Jeans - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -645,7 +645,7 @@ const products = [
   },
   {
     "name": "Zara High-Performance Top - Fashion",
-    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=640",
+    "image": "https://picsum.photos/seed/zara-high-performance-top-fashion/640/480",
     "brand": "Zara",
     "category": "Fashion - Women",
     "description": "Experience the best quality with Zara High-Performance Top - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -659,7 +659,7 @@ const products = [
   },
   {
     "name": "Bata Elegant Floral Dress - Fashion",
-    "image": "https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?w=640",
+    "image": "https://picsum.photos/seed/bata-elegant-floral-dress-fashion/640/480",
     "brand": "Bata",
     "category": "Fashion - Women",
     "description": "Experience the best quality with Bata Elegant Floral Dress - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -673,7 +673,7 @@ const products = [
   },
   {
     "name": "H&M Compact Top - Fashion",
-    "image": "https://images.unsplash.com/photo-1591369822096-ffd140ec948f?w=640",
+    "image": "https://picsum.photos/seed/h-m-compact-top-fashion/640/480",
     "brand": "H&M",
     "category": "Fashion - Women",
     "description": "Experience the best quality with H&M Compact Top - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -687,7 +687,7 @@ const products = [
   },
   {
     "name": "H&M Stylish Jeans - Fashion",
-    "image": "https://images.unsplash.com/photo-1495121605193-b116b5b9c5fe?w=640",
+    "image": "https://picsum.photos/seed/h-m-stylish-jeans-fashion/640/480",
     "brand": "H&M",
     "category": "Fashion - Women",
     "description": "Experience the best quality with H&M Stylish Jeans - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -701,7 +701,7 @@ const products = [
   },
   {
     "name": "Bata Stylish Kurti - Fashion",
-    "image": "https://images.unsplash.com/photo-1509631179647-0177331693ae?w=640",
+    "image": "https://picsum.photos/seed/bata-stylish-kurti-fashion/640/480",
     "brand": "Bata",
     "category": "Fashion - Women",
     "description": "Experience the best quality with Bata Stylish Kurti - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -715,7 +715,7 @@ const products = [
   },
   {
     "name": "W High-Performance Heels - Fashion",
-    "image": "https://images.unsplash.com/photo-1566174053879-31528523f8ae?w=640",
+    "image": "https://picsum.photos/seed/w-high-performance-heels-fashion/640/480",
     "brand": "W",
     "category": "Fashion - Women",
     "description": "Experience the best quality with W High-Performance Heels - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -729,7 +729,7 @@ const products = [
   },
   {
     "name": "H&M Modern Kurti - Fashion",
-    "image": "https://images.unsplash.com/photo-1543076447-215ad9ba6923?w=640",
+    "image": "https://picsum.photos/seed/h-m-modern-kurti-fashion/640/480",
     "brand": "H&M",
     "category": "Fashion - Women",
     "description": "Experience the best quality with H&M Modern Kurti - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -743,7 +743,7 @@ const products = [
   },
   {
     "name": "Gini & Jony Premium Shorts - Fashion",
-    "image": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=640",
+    "image": "https://picsum.photos/seed/gini-jony-premium-shorts-fashion/640/480",
     "brand": "Gini & Jony",
     "category": "Fashion - Kids",
     "description": "Experience the best quality with Gini & Jony Premium Shorts - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -757,7 +757,7 @@ const products = [
   },
   {
     "name": "Adidas Kids Modern Toy Car - Fashion",
-    "image": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=640",
+    "image": "https://picsum.photos/seed/adidas-kids-modern-toy-car-fashion/640/480",
     "brand": "Adidas Kids",
     "category": "Fashion - Kids",
     "description": "Experience the best quality with Adidas Kids Modern Toy Car - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -771,7 +771,7 @@ const products = [
   },
   {
     "name": "Mothercare Modern T-Shirt - Fashion",
-    "image": "https://images.unsplash.com/photo-1596870230751-e8a2afa6e966?w=640",
+    "image": "https://picsum.photos/seed/mothercare-modern-t-shirt-fashion/640/480",
     "brand": "Mothercare",
     "category": "Fashion - Kids",
     "description": "Experience the best quality with Mothercare Modern T-Shirt - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -785,7 +785,7 @@ const products = [
   },
   {
     "name": "Lilliput Elegant Shorts - Fashion",
-    "image": "https://images.unsplash.com/photo-1503919545889-aef636e10ad4?w=640",
+    "image": "https://picsum.photos/seed/lilliput-elegant-shorts-fashion/640/480",
     "brand": "Lilliput",
     "category": "Fashion - Kids",
     "description": "Experience the best quality with Lilliput Elegant Shorts - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -799,7 +799,7 @@ const products = [
   },
   {
     "name": "Lilliput Classic Shorts - Fashion",
-    "image": "https://images.unsplash.com/photo-1560506840-ec148e82a604?w=640",
+    "image": "https://picsum.photos/seed/lilliput-classic-shorts-fashion/640/480",
     "brand": "Lilliput",
     "category": "Fashion - Kids",
     "description": "Experience the best quality with Lilliput Classic Shorts - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -813,7 +813,7 @@ const products = [
   },
   {
     "name": "Lilliput Premium Sports Shoes - Fashion",
-    "image": "https://images.unsplash.com/photo-1566206091558-7f218b696731?w=640",
+    "image": "https://picsum.photos/seed/lilliput-premium-sports-shoes-fashion/640/480",
     "brand": "Lilliput",
     "category": "Fashion - Kids",
     "description": "Experience the best quality with Lilliput Premium Sports Shoes - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -827,7 +827,7 @@ const products = [
   },
   {
     "name": "Mothercare High-Performance Frock - Fashion",
-    "image": "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=640",
+    "image": "https://picsum.photos/seed/mothercare-high-performance-frock-fashion/640/480",
     "brand": "Mothercare",
     "category": "Fashion - Kids",
     "description": "Experience the best quality with Mothercare High-Performance Frock - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -841,7 +841,7 @@ const products = [
   },
   {
     "name": "Gini & Jony Compact T-Shirt - Fashion",
-    "image": "https://images.unsplash.com/photo-1508896694512-1eade558679c?w=640",
+    "image": "https://picsum.photos/seed/gini-jony-compact-t-shirt-fashion/640/480",
     "brand": "Gini & Jony",
     "category": "Fashion - Kids",
     "description": "Experience the best quality with Gini & Jony Compact T-Shirt - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -855,7 +855,7 @@ const products = [
   },
   {
     "name": "Lilliput Stylish School Bag - Fashion",
-    "image": "https://images.unsplash.com/photo-1604467715878-83e57e8bc129?w=640",
+    "image": "https://picsum.photos/seed/lilliput-stylish-school-bag-fashion/640/480",
     "brand": "Lilliput",
     "category": "Fashion - Kids",
     "description": "Experience the best quality with Lilliput Stylish School Bag - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -869,7 +869,7 @@ const products = [
   },
   {
     "name": "Gini & Jony Durable T-Shirt - Fashion",
-    "image": "https://images.unsplash.com/photo-1606816913726-d89b6d5fc41c?w=640",
+    "image": "https://picsum.photos/seed/gini-jony-durable-t-shirt-fashion/640/480",
     "brand": "Gini & Jony",
     "category": "Fashion - Kids",
     "description": "Experience the best quality with Gini & Jony Durable T-Shirt - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -883,7 +883,7 @@ const products = [
   },
   {
     "name": "Mothercare Stylish School Bag - Fashion",
-    "image": "https://images.unsplash.com/photo-1509281373149-e957c6296406?w=640",
+    "image": "https://picsum.photos/seed/mothercare-stylish-school-bag-fashion/640/480",
     "brand": "Mothercare",
     "category": "Fashion - Kids",
     "description": "Experience the best quality with Mothercare Stylish School Bag - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -897,7 +897,7 @@ const products = [
   },
   {
     "name": "Lilliput Modern T-Shirt - Fashion",
-    "image": "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=640",
+    "image": "https://picsum.photos/seed/lilliput-modern-t-shirt-fashion/640/480",
     "brand": "Lilliput",
     "category": "Fashion - Kids",
     "description": "Experience the best quality with Lilliput Modern T-Shirt - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -911,7 +911,7 @@ const products = [
   },
   {
     "name": "Mothercare Elegant Sports Shoes - Fashion",
-    "image": "https://images.unsplash.com/photo-1596870230751-e8a2afa6e966?w=640",
+    "image": "https://picsum.photos/seed/mothercare-elegant-sports-shoes-fashion/640/480",
     "brand": "Mothercare",
     "category": "Fashion - Kids",
     "description": "Experience the best quality with Mothercare Elegant Sports Shoes - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -925,7 +925,7 @@ const products = [
   },
   {
     "name": "Gini & Jony Classic School Bag - Fashion",
-    "image": "https://images.unsplash.com/photo-1503919545889-aef636e10ad4?w=640",
+    "image": "https://picsum.photos/seed/gini-jony-classic-school-bag-fashion/640/480",
     "brand": "Gini & Jony",
     "category": "Fashion - Kids",
     "description": "Experience the best quality with Gini & Jony Classic School Bag - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -939,7 +939,7 @@ const products = [
   },
   {
     "name": "Lilliput Modern Frock - Fashion",
-    "image": "https://images.unsplash.com/photo-1560506840-ec148e82a604?w=640",
+    "image": "https://picsum.photos/seed/lilliput-modern-frock-fashion/640/480",
     "brand": "Lilliput",
     "category": "Fashion - Kids",
     "description": "Experience the best quality with Lilliput Modern Frock - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -953,7 +953,7 @@ const products = [
   },
   {
     "name": "Lilliput Compact Frock - Fashion",
-    "image": "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?w=640",
+    "image": "https://picsum.photos/seed/lilliput-compact-frock-fashion/640/480",
     "brand": "Lilliput",
     "category": "Fashion - Kids",
     "description": "Experience the best quality with Lilliput Compact Frock - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -967,7 +967,7 @@ const products = [
   },
   {
     "name": "Gini & Jony Premium Toy Car - Fashion",
-    "image": "https://images.unsplash.com/photo-1508896694512-1eade558679c?w=640",
+    "image": "https://picsum.photos/seed/gini-jony-premium-toy-car-fashion/640/480",
     "brand": "Gini & Jony",
     "category": "Fashion - Kids",
     "description": "Experience the best quality with Gini & Jony Premium Toy Car - Fashion. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -981,7 +981,7 @@ const products = [
   },
   {
     "name": "Philips Compact Bed Sheet - Home",
-    "image": "https://images.unsplash.com/photo-1604467715878-83e57e8bc129?w=640",
+    "image": "https://picsum.photos/seed/philips-compact-bed-sheet-home/640/480",
     "brand": "Philips",
     "category": "Home & Kitchen",
     "description": "Experience the best quality with Philips Compact Bed Sheet - Home. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -995,7 +995,7 @@ const products = [
   },
   {
     "name": "Philips Elegant Mixer Grinder - Home",
-    "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=640",
+    "image": "https://picsum.photos/seed/philips-elegant-mixer-grinder-home/640/480",
     "brand": "Philips",
     "category": "Home & Kitchen",
     "description": "Experience the best quality with Philips Elegant Mixer Grinder - Home. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1009,7 +1009,7 @@ const products = [
   },
   {
     "name": "Philips Classic Water Bottle - Home",
-    "image": "https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=640",
+    "image": "https://picsum.photos/seed/philips-classic-water-bottle-home/640/480",
     "brand": "Philips",
     "category": "Home & Kitchen",
     "description": "Experience the best quality with Philips Classic Water Bottle - Home. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1023,7 +1023,7 @@ const products = [
   },
   {
     "name": "Bajaj Classic Mixer Grinder - Home",
-    "image": "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=640",
+    "image": "https://picsum.photos/seed/bajaj-classic-mixer-grinder-home/640/480",
     "brand": "Bajaj",
     "category": "Home & Kitchen",
     "description": "Experience the best quality with Bajaj Classic Mixer Grinder - Home. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1037,7 +1037,7 @@ const products = [
   },
   {
     "name": "Ikea Modern Bed Sheet - Home",
-    "image": "https://images.unsplash.com/photo-1495121605193-b116b5b9c5fe?w=640",
+    "image": "https://picsum.photos/seed/ikea-modern-bed-sheet-home/640/480",
     "brand": "Ikea",
     "category": "Home & Kitchen",
     "description": "Experience the best quality with Ikea Modern Bed Sheet - Home. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1051,7 +1051,7 @@ const products = [
   },
   {
     "name": "Prestige Stylish Water Bottle - Home",
-    "image": "https://images.unsplash.com/photo-1593784991095-a205069470b6?w=640",
+    "image": "https://picsum.photos/seed/prestige-stylish-water-bottle-home/640/480",
     "brand": "Prestige",
     "category": "Home & Kitchen",
     "description": "Experience the best quality with Prestige Stylish Water Bottle - Home. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1065,7 +1065,7 @@ const products = [
   },
   {
     "name": "Philips Modern Bed Sheet - Home",
-    "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=640",
+    "image": "https://picsum.photos/seed/philips-modern-bed-sheet-home/640/480",
     "brand": "Philips",
     "category": "Home & Kitchen",
     "description": "Experience the best quality with Philips Modern Bed Sheet - Home. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1079,7 +1079,7 @@ const products = [
   },
   {
     "name": "Philips Modern Toaster - Home",
-    "image": "https://images.unsplash.com/photo-1556909114-44e3e70034e2?w=640",
+    "image": "https://picsum.photos/seed/philips-modern-toaster-home/640/480",
     "brand": "Philips",
     "category": "Home & Kitchen",
     "description": "Experience the best quality with Philips Modern Toaster - Home. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1093,7 +1093,7 @@ const products = [
   },
   {
     "name": "Ikea Stylish Bed Sheet - Home",
-    "image": "https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?w=640",
+    "image": "https://picsum.photos/seed/ikea-stylish-bed-sheet-home/640/480",
     "brand": "Ikea",
     "category": "Home & Kitchen",
     "description": "Experience the best quality with Ikea Stylish Bed Sheet - Home. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1107,7 +1107,7 @@ const products = [
   },
   {
     "name": "Philips Elegant Storage Container Set - Home",
-    "image": "https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=640",
+    "image": "https://picsum.photos/seed/philips-elegant-storage-container-set-home/640/480",
     "brand": "Philips",
     "category": "Home & Kitchen",
     "description": "Experience the best quality with Philips Elegant Storage Container Set - Home. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1121,7 +1121,7 @@ const products = [
   },
   {
     "name": "Ikea Classic Non-Stick Fry Pan - Home",
-    "image": "https://images.unsplash.com/photo-1540518614846-7eded433c457?w=640",
+    "image": "https://picsum.photos/seed/ikea-classic-non-stick-fry-pan-home/640/480",
     "brand": "Ikea",
     "category": "Home & Kitchen",
     "description": "Experience the best quality with Ikea Classic Non-Stick Fry Pan - Home. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1135,7 +1135,7 @@ const products = [
   },
   {
     "name": "Prestige Compact Storage Container Set - Home",
-    "image": "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=640",
+    "image": "https://picsum.photos/seed/prestige-compact-storage-container-set-home/640/480",
     "brand": "Prestige",
     "category": "Home & Kitchen",
     "description": "Experience the best quality with Prestige Compact Storage Container Set - Home. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1149,7 +1149,7 @@ const products = [
   },
   {
     "name": "Bajaj Stylish Non-Stick Fry Pan - Home",
-    "image": "https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=640",
+    "image": "https://picsum.photos/seed/bajaj-stylish-non-stick-fry-pan-home/640/480",
     "brand": "Bajaj",
     "category": "Home & Kitchen",
     "description": "Experience the best quality with Bajaj Stylish Non-Stick Fry Pan - Home. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1163,7 +1163,7 @@ const products = [
   },
   {
     "name": "Ikea Modern Water Bottle - Home",
-    "image": "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=640",
+    "image": "https://picsum.photos/seed/ikea-modern-water-bottle-home/640/480",
     "brand": "Ikea",
     "category": "Home & Kitchen",
     "description": "Experience the best quality with Ikea Modern Water Bottle - Home. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1177,7 +1177,7 @@ const products = [
   },
   {
     "name": "Milton Premium Pressure Cooker - Home",
-    "image": "https://images.unsplash.com/photo-1495121605193-b116b5b9c5fe?w=640",
+    "image": "https://picsum.photos/seed/milton-premium-pressure-cooker-home/640/480",
     "brand": "Milton",
     "category": "Home & Kitchen",
     "description": "Experience the best quality with Milton Premium Pressure Cooker - Home. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1191,7 +1191,7 @@ const products = [
   },
   {
     "name": "Prestige Classic Water Bottle - Home",
-    "image": "https://images.unsplash.com/photo-1593784991095-a205069470b6?w=640",
+    "image": "https://picsum.photos/seed/prestige-classic-water-bottle-home/640/480",
     "brand": "Prestige",
     "category": "Home & Kitchen",
     "description": "Experience the best quality with Prestige Classic Water Bottle - Home. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1205,7 +1205,7 @@ const products = [
   },
   {
     "name": "Milton High-Performance Bed Sheet - Home",
-    "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=640",
+    "image": "https://picsum.photos/seed/milton-high-performance-bed-sheet-home/640/480",
     "brand": "Milton",
     "category": "Home & Kitchen",
     "description": "Experience the best quality with Milton High-Performance Bed Sheet - Home. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1219,7 +1219,7 @@ const products = [
   },
   {
     "name": "Prestige Premium Bed Sheet - Home",
-    "image": "https://images.unsplash.com/photo-1556909114-44e3e70034e2?w=640",
+    "image": "https://picsum.photos/seed/prestige-premium-bed-sheet-home/640/480",
     "brand": "Prestige",
     "category": "Home & Kitchen",
     "description": "Experience the best quality with Prestige Premium Bed Sheet - Home. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1233,7 +1233,7 @@ const products = [
   },
   {
     "name": "Dove Stylish Conditioner - Beauty",
-    "image": "https://images.unsplash.com/photo-1584269600464-37b1b58a9fe7?w=640",
+    "image": "https://picsum.photos/seed/dove-stylish-conditioner-beauty/640/480",
     "brand": "Dove",
     "category": "Beauty & Personal Care",
     "description": "Experience the best quality with Dove Stylish Conditioner - Beauty. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1247,7 +1247,7 @@ const products = [
   },
   {
     "name": "Maybelline High-Performance Sunscreen - Beauty",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/maybelline-high-performance-sunscreen-beauty/640/480",
     "brand": "Maybelline",
     "category": "Beauty & Personal Care",
     "description": "Experience the best quality with Maybelline High-Performance Sunscreen - Beauty. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1261,7 +1261,7 @@ const products = [
   },
   {
     "name": "Mamaearth Compact Face Wash - Beauty",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/mamaearth-compact-face-wash-beauty/640/480",
     "brand": "Mamaearth",
     "category": "Beauty & Personal Care",
     "description": "Experience the best quality with Mamaearth Compact Face Wash - Beauty. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1275,7 +1275,7 @@ const products = [
   },
   {
     "name": "Nivea Compact Moisturizer - Beauty",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/nivea-compact-moisturizer-beauty/640/480",
     "brand": "Nivea",
     "category": "Beauty & Personal Care",
     "description": "Experience the best quality with Nivea Compact Moisturizer - Beauty. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1289,7 +1289,7 @@ const products = [
   },
   {
     "name": "Nivea Durable Body Lotion - Beauty",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/nivea-durable-body-lotion-beauty/640/480",
     "brand": "Nivea",
     "category": "Beauty & Personal Care",
     "description": "Experience the best quality with Nivea Durable Body Lotion - Beauty. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1303,7 +1303,7 @@ const products = [
   },
   {
     "name": "Mamaearth Durable Conditioner - Beauty",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/mamaearth-durable-conditioner-beauty/640/480",
     "brand": "Mamaearth",
     "category": "Beauty & Personal Care",
     "description": "Experience the best quality with Mamaearth Durable Conditioner - Beauty. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1317,7 +1317,7 @@ const products = [
   },
   {
     "name": "L'Oreal Modern Conditioner - Beauty",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/l-oreal-modern-conditioner-beauty/640/480",
     "brand": "L'Oreal",
     "category": "Beauty & Personal Care",
     "description": "Experience the best quality with L'Oreal Modern Conditioner - Beauty. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1331,7 +1331,7 @@ const products = [
   },
   {
     "name": "Maybelline Durable Sunscreen - Beauty",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/maybelline-durable-sunscreen-beauty/640/480",
     "brand": "Maybelline",
     "category": "Beauty & Personal Care",
     "description": "Experience the best quality with Maybelline Durable Sunscreen - Beauty. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1345,7 +1345,7 @@ const products = [
   },
   {
     "name": "L'Oreal Elegant Body Lotion - Beauty",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/l-oreal-elegant-body-lotion-beauty/640/480",
     "brand": "L'Oreal",
     "category": "Beauty & Personal Care",
     "description": "Experience the best quality with L'Oreal Elegant Body Lotion - Beauty. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1359,7 +1359,7 @@ const products = [
   },
   {
     "name": "Maybelline High-Performance Conditioner - Beauty",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/maybelline-high-performance-conditioner-beauty/640/480",
     "brand": "Maybelline",
     "category": "Beauty & Personal Care",
     "description": "Experience the best quality with Maybelline High-Performance Conditioner - Beauty. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1373,7 +1373,7 @@ const products = [
   },
   {
     "name": "L'Oreal Classic Face Wash - Beauty",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/l-oreal-classic-face-wash-beauty/640/480",
     "brand": "L'Oreal",
     "category": "Beauty & Personal Care",
     "description": "Experience the best quality with L'Oreal Classic Face Wash - Beauty. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1387,7 +1387,7 @@ const products = [
   },
   {
     "name": "Mamaearth Premium Conditioner - Beauty",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/mamaearth-premium-conditioner-beauty/640/480",
     "brand": "Mamaearth",
     "category": "Beauty & Personal Care",
     "description": "Experience the best quality with Mamaearth Premium Conditioner - Beauty. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1401,7 +1401,7 @@ const products = [
   },
   {
     "name": "Himalaya Modern Face Wash - Beauty",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/himalaya-modern-face-wash-beauty/640/480",
     "brand": "Himalaya",
     "category": "Beauty & Personal Care",
     "description": "Experience the best quality with Himalaya Modern Face Wash - Beauty. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1415,7 +1415,7 @@ const products = [
   },
   {
     "name": "Mamaearth Elegant Body Lotion - Beauty",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/mamaearth-elegant-body-lotion-beauty/640/480",
     "brand": "Mamaearth",
     "category": "Beauty & Personal Care",
     "description": "Experience the best quality with Mamaearth Elegant Body Lotion - Beauty. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1429,7 +1429,7 @@ const products = [
   },
   {
     "name": "Maybelline Compact Sunscreen - Beauty",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/maybelline-compact-sunscreen-beauty/640/480",
     "brand": "Maybelline",
     "category": "Beauty & Personal Care",
     "description": "Experience the best quality with Maybelline Compact Sunscreen - Beauty. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1443,7 +1443,7 @@ const products = [
   },
   {
     "name": "Dove Durable Shampoo - Beauty",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/dove-durable-shampoo-beauty/640/480",
     "brand": "Dove",
     "category": "Beauty & Personal Care",
     "description": "Experience the best quality with Dove Durable Shampoo - Beauty. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1457,7 +1457,7 @@ const products = [
   },
   {
     "name": "Maybelline Classic Conditioner - Beauty",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/maybelline-classic-conditioner-beauty/640/480",
     "brand": "Maybelline",
     "category": "Beauty & Personal Care",
     "description": "Experience the best quality with Maybelline Classic Conditioner - Beauty. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1471,7 +1471,7 @@ const products = [
   },
   {
     "name": "Nivia Elegant Yoga Mat - Sports",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/nivia-elegant-yoga-mat-sports/640/480",
     "brand": "Nivia",
     "category": "Sports & Fitness",
     "description": "Experience the best quality with Nivia Elegant Yoga Mat - Sports. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1485,7 +1485,7 @@ const products = [
   },
   {
     "name": "Nivia Classic Yoga Mat - Sports",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/nivia-classic-yoga-mat-sports/640/480",
     "brand": "Nivia",
     "category": "Sports & Fitness",
     "description": "Experience the best quality with Nivia Classic Yoga Mat - Sports. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1499,7 +1499,7 @@ const products = [
   },
   {
     "name": "Decathlon Elegant Yoga Mat - Sports",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/decathlon-elegant-yoga-mat-sports/640/480",
     "brand": "Decathlon",
     "category": "Sports & Fitness",
     "description": "Experience the best quality with Decathlon Elegant Yoga Mat - Sports. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1513,7 +1513,7 @@ const products = [
   },
   {
     "name": "Yonex Classic Yoga Mat - Sports",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/yonex-classic-yoga-mat-sports/640/480",
     "brand": "Yonex",
     "category": "Sports & Fitness",
     "description": "Experience the best quality with Yonex Classic Yoga Mat - Sports. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1527,7 +1527,7 @@ const products = [
   },
   {
     "name": "Yonex Premium Badminton Racket - Sports",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/yonex-premium-badminton-racket-sports/640/480",
     "brand": "Yonex",
     "category": "Sports & Fitness",
     "description": "Experience the best quality with Yonex Premium Badminton Racket - Sports. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1541,7 +1541,7 @@ const products = [
   },
   {
     "name": "Cosco High-Performance Football - Sports",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/cosco-high-performance-football-sports/640/480",
     "brand": "Cosco",
     "category": "Sports & Fitness",
     "description": "Experience the best quality with Cosco High-Performance Football - Sports. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1555,7 +1555,7 @@ const products = [
   },
   {
     "name": "Cosco Compact Cricket Bat - Sports",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/cosco-compact-cricket-bat-sports/640/480",
     "brand": "Cosco",
     "category": "Sports & Fitness",
     "description": "Experience the best quality with Cosco Compact Cricket Bat - Sports. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1569,7 +1569,7 @@ const products = [
   },
   {
     "name": "Yonex Modern Resistance Bands - Sports",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/yonex-modern-resistance-bands-sports/640/480",
     "brand": "Yonex",
     "category": "Sports & Fitness",
     "description": "Experience the best quality with Yonex Modern Resistance Bands - Sports. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1583,7 +1583,7 @@ const products = [
   },
   {
     "name": "Cosco Durable Cricket Bat - Sports",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/cosco-durable-cricket-bat-sports/640/480",
     "brand": "Cosco",
     "category": "Sports & Fitness",
     "description": "Experience the best quality with Cosco Durable Cricket Bat - Sports. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1597,7 +1597,7 @@ const products = [
   },
   {
     "name": "Cosco Compact Dumbbells (Set) - Sports",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/cosco-compact-dumbbells-set-sports/640/480",
     "brand": "Cosco",
     "category": "Sports & Fitness",
     "description": "Experience the best quality with Cosco Compact Dumbbells (Set) - Sports. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1611,7 +1611,7 @@ const products = [
   },
   {
     "name": "Decathlon Premium Dumbbells (Set) - Sports",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/decathlon-premium-dumbbells-set-sports/640/480",
     "brand": "Decathlon",
     "category": "Sports & Fitness",
     "description": "Experience the best quality with Decathlon Premium Dumbbells (Set) - Sports. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1625,7 +1625,7 @@ const products = [
   },
   {
     "name": "Nivia Durable Cricket Bat - Sports",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/nivia-durable-cricket-bat-sports/640/480",
     "brand": "Nivia",
     "category": "Sports & Fitness",
     "description": "Experience the best quality with Nivia Durable Cricket Bat - Sports. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1639,7 +1639,7 @@ const products = [
   },
   {
     "name": "Yonex Stylish Dumbbells (Set) - Sports",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/yonex-stylish-dumbbells-set-sports/640/480",
     "brand": "Yonex",
     "category": "Sports & Fitness",
     "description": "Experience the best quality with Yonex Stylish Dumbbells (Set) - Sports. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1653,7 +1653,7 @@ const products = [
   },
   {
     "name": "Cosco Elegant Dumbbells (Set) - Sports",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/cosco-elegant-dumbbells-set-sports/640/480",
     "brand": "Cosco",
     "category": "Sports & Fitness",
     "description": "Experience the best quality with Cosco Elegant Dumbbells (Set) - Sports. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1667,7 +1667,7 @@ const products = [
   },
   {
     "name": "Yonex High-Performance Football - Sports",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/yonex-high-performance-football-sports/640/480",
     "brand": "Yonex",
     "category": "Sports & Fitness",
     "description": "Experience the best quality with Yonex High-Performance Football - Sports. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1681,7 +1681,7 @@ const products = [
   },
   {
     "name": "Nivia Classic Badminton Racket - Sports",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/nivia-classic-badminton-racket-sports/640/480",
     "brand": "Nivia",
     "category": "Sports & Fitness",
     "description": "Experience the best quality with Nivia Classic Badminton Racket - Sports. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1695,7 +1695,7 @@ const products = [
   },
   {
     "name": "Cosco Durable Badminton Racket - Sports",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/cosco-durable-badminton-racket-sports/640/480",
     "brand": "Cosco",
     "category": "Sports & Fitness",
     "description": "Experience the best quality with Cosco Durable Badminton Racket - Sports. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1709,7 +1709,7 @@ const products = [
   },
   {
     "name": "Nivia High-Performance Yoga Mat - Sports",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/nivia-high-performance-yoga-mat-sports/640/480",
     "brand": "Nivia",
     "category": "Sports & Fitness",
     "description": "Experience the best quality with Nivia High-Performance Yoga Mat - Sports. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1723,7 +1723,7 @@ const products = [
   },
   {
     "name": "Arihant High-Performance Notebook Set - Books",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/arihant-high-performance-notebook-set-books/640/480",
     "brand": "Arihant",
     "category": "Books & Stationery",
     "description": "Experience the best quality with Arihant High-Performance Notebook Set - Books. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1737,7 +1737,7 @@ const products = [
   },
   {
     "name": "Classmate Elegant Exam Prep Book - Books",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/classmate-elegant-exam-prep-book-books/640/480",
     "brand": "Classmate",
     "category": "Books & Stationery",
     "description": "Experience the best quality with Classmate Elegant Exam Prep Book - Books. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1751,7 +1751,7 @@ const products = [
   },
   {
     "name": "Parker Premium Sketch Pen Set - Books",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/parker-premium-sketch-pen-set-books/640/480",
     "brand": "Parker",
     "category": "Books & Stationery",
     "description": "Experience the best quality with Parker Premium Sketch Pen Set - Books. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1765,7 +1765,7 @@ const products = [
   },
   {
     "name": "Arihant Stylish Novel - Books",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/arihant-stylish-novel-books/640/480",
     "brand": "Arihant",
     "category": "Books & Stationery",
     "description": "Experience the best quality with Arihant Stylish Novel - Books. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1779,7 +1779,7 @@ const products = [
   },
   {
     "name": "Arihant Durable Notebook Set - Books",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/arihant-durable-notebook-set-books/640/480",
     "brand": "Arihant",
     "category": "Books & Stationery",
     "description": "Experience the best quality with Arihant Durable Notebook Set - Books. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1793,7 +1793,7 @@ const products = [
   },
   {
     "name": "Penguin Compact Sketch Pen Set - Books",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/penguin-compact-sketch-pen-set-books/640/480",
     "brand": "Penguin",
     "category": "Books & Stationery",
     "description": "Experience the best quality with Penguin Compact Sketch Pen Set - Books. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1807,7 +1807,7 @@ const products = [
   },
   {
     "name": "Penguin Premium Notebook Set - Books",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/penguin-premium-notebook-set-books/640/480",
     "brand": "Penguin",
     "category": "Books & Stationery",
     "description": "Experience the best quality with Penguin Premium Notebook Set - Books. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1821,7 +1821,7 @@ const products = [
   },
   {
     "name": "Penguin Compact Notebook Set - Books",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/penguin-compact-notebook-set-books/640/480",
     "brand": "Penguin",
     "category": "Books & Stationery",
     "description": "Experience the best quality with Penguin Compact Notebook Set - Books. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1835,7 +1835,7 @@ const products = [
   },
   {
     "name": "Arihant Compact Exam Prep Book - Books",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/arihant-compact-exam-prep-book-books/640/480",
     "brand": "Arihant",
     "category": "Books & Stationery",
     "description": "Experience the best quality with Arihant Compact Exam Prep Book - Books. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1849,7 +1849,7 @@ const products = [
   },
   {
     "name": "Penguin Premium Gel Pen Set - Books",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/penguin-premium-gel-pen-set-books/640/480",
     "brand": "Penguin",
     "category": "Books & Stationery",
     "description": "Experience the best quality with Penguin Premium Gel Pen Set - Books. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1863,7 +1863,7 @@ const products = [
   },
   {
     "name": "Classmate Modern Sketch Pen Set - Books",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/classmate-modern-sketch-pen-set-books/640/480",
     "brand": "Classmate",
     "category": "Books & Stationery",
     "description": "Experience the best quality with Classmate Modern Sketch Pen Set - Books. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1877,7 +1877,7 @@ const products = [
   },
   {
     "name": "Arihant Stylish Exam Prep Book - Books",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/arihant-stylish-exam-prep-book-books/640/480",
     "brand": "Arihant",
     "category": "Books & Stationery",
     "description": "Experience the best quality with Arihant Stylish Exam Prep Book - Books. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1891,7 +1891,7 @@ const products = [
   },
   {
     "name": "Penguin Premium Sketch Pen Set - Books",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/penguin-premium-sketch-pen-set-books/640/480",
     "brand": "Penguin",
     "category": "Books & Stationery",
     "description": "Experience the best quality with Penguin Premium Sketch Pen Set - Books. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1905,7 +1905,7 @@ const products = [
   },
   {
     "name": "Parker Stylish Novel - Books",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/parker-stylish-novel-books/640/480",
     "brand": "Parker",
     "category": "Books & Stationery",
     "description": "Experience the best quality with Parker Stylish Novel - Books. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1919,7 +1919,7 @@ const products = [
   },
   {
     "name": "Parker High-Performance Notebook Set - Books",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/parker-high-performance-notebook-set-books/640/480",
     "brand": "Parker",
     "category": "Books & Stationery",
     "description": "Experience the best quality with Parker High-Performance Notebook Set - Books. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1933,7 +1933,7 @@ const products = [
   },
   {
     "name": "Arihant Elegant Novel - Books",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/arihant-elegant-novel-books/640/480",
     "brand": "Arihant",
     "category": "Books & Stationery",
     "description": "Experience the best quality with Arihant Elegant Novel - Books. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1947,7 +1947,7 @@ const products = [
   },
   {
     "name": "Classmate Modern Gel Pen Set - Books",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/classmate-modern-gel-pen-set-books/640/480",
     "brand": "Classmate",
     "category": "Books & Stationery",
     "description": "Experience the best quality with Classmate Modern Gel Pen Set - Books. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1961,7 +1961,7 @@ const products = [
   },
   {
     "name": "Penguin Compact Exam Prep Book - Books",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/penguin-compact-exam-prep-book-books/640/480",
     "brand": "Penguin",
     "category": "Books & Stationery",
     "description": "Experience the best quality with Penguin Compact Exam Prep Book - Books. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1975,7 +1975,7 @@ const products = [
   },
   {
     "name": "Giva Durable Silver Plated Earrings - Jewellery",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/giva-durable-silver-plated-earrings-jewellery/640/480",
     "brand": "Giva",
     "category": "Jewellery",
     "description": "Experience the best quality with Giva Durable Silver Plated Earrings - Jewellery. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -1989,7 +1989,7 @@ const products = [
   },
   {
     "name": "Tanishq (Artificial) Elegant Necklace Set - Jewellery",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/tanishq-artificial-elegant-necklace-set-jewellery/640/480",
     "brand": "Tanishq (Artificial)",
     "category": "Jewellery",
     "description": "Experience the best quality with Tanishq (Artificial) Elegant Necklace Set - Jewellery. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2003,7 +2003,7 @@ const products = [
   },
   {
     "name": "Voylla Compact Ring - Jewellery",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/voylla-compact-ring-jewellery/640/480",
     "brand": "Voylla",
     "category": "Jewellery",
     "description": "Experience the best quality with Voylla Compact Ring - Jewellery. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2017,7 +2017,7 @@ const products = [
   },
   {
     "name": "Sukkhi Classic Gold Plated Bangles - Jewellery",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/sukkhi-classic-gold-plated-bangles-jewellery/640/480",
     "brand": "Sukkhi",
     "category": "Jewellery",
     "description": "Experience the best quality with Sukkhi Classic Gold Plated Bangles - Jewellery. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2031,7 +2031,7 @@ const products = [
   },
   {
     "name": "Sukkhi Premium Silver Plated Earrings - Jewellery",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/sukkhi-premium-silver-plated-earrings-jewellery/640/480",
     "brand": "Sukkhi",
     "category": "Jewellery",
     "description": "Experience the best quality with Sukkhi Premium Silver Plated Earrings - Jewellery. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2045,7 +2045,7 @@ const products = [
   },
   {
     "name": "Voylla Modern Ring - Jewellery",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/voylla-modern-ring-jewellery/640/480",
     "brand": "Voylla",
     "category": "Jewellery",
     "description": "Experience the best quality with Voylla Modern Ring - Jewellery. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2059,7 +2059,7 @@ const products = [
   },
   {
     "name": "Voylla Elegant Anklet - Jewellery",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/voylla-elegant-anklet-jewellery/640/480",
     "brand": "Voylla",
     "category": "Jewellery",
     "description": "Experience the best quality with Voylla Elegant Anklet - Jewellery. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2073,7 +2073,7 @@ const products = [
   },
   {
     "name": "Giva Modern Necklace Set - Jewellery",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/giva-modern-necklace-set-jewellery/640/480",
     "brand": "Giva",
     "category": "Jewellery",
     "description": "Experience the best quality with Giva Modern Necklace Set - Jewellery. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2087,7 +2087,7 @@ const products = [
   },
   {
     "name": "Giva Elegant Silver Plated Earrings - Jewellery",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/giva-elegant-silver-plated-earrings-jewellery/640/480",
     "brand": "Giva",
     "category": "Jewellery",
     "description": "Experience the best quality with Giva Elegant Silver Plated Earrings - Jewellery. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2101,7 +2101,7 @@ const products = [
   },
   {
     "name": "Sukkhi Modern Necklace Set - Jewellery",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/sukkhi-modern-necklace-set-jewellery/640/480",
     "brand": "Sukkhi",
     "category": "Jewellery",
     "description": "Experience the best quality with Sukkhi Modern Necklace Set - Jewellery. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2115,7 +2115,7 @@ const products = [
   },
   {
     "name": "Voylla Modern Anklet - Jewellery",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/voylla-modern-anklet-jewellery/640/480",
     "brand": "Voylla",
     "category": "Jewellery",
     "description": "Experience the best quality with Voylla Modern Anklet - Jewellery. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2129,7 +2129,7 @@ const products = [
   },
   {
     "name": "Tanishq (Artificial) Elegant Silver Plated Earrings - Jewellery",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/tanishq-artificial-elegant-silver-plated-earrings-jewellery/640/480",
     "brand": "Tanishq (Artificial)",
     "category": "Jewellery",
     "description": "Experience the best quality with Tanishq (Artificial) Elegant Silver Plated Earrings - Jewellery. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2143,7 +2143,7 @@ const products = [
   },
   {
     "name": "Voylla Classic Silver Plated Earrings - Jewellery",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/voylla-classic-silver-plated-earrings-jewellery/640/480",
     "brand": "Voylla",
     "category": "Jewellery",
     "description": "Experience the best quality with Voylla Classic Silver Plated Earrings - Jewellery. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2157,7 +2157,7 @@ const products = [
   },
   {
     "name": "Giva Elegant Ring - Jewellery",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/giva-elegant-ring-jewellery/640/480",
     "brand": "Giva",
     "category": "Jewellery",
     "description": "Experience the best quality with Giva Elegant Ring - Jewellery. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2171,7 +2171,7 @@ const products = [
   },
   {
     "name": "Sukkhi Stylish Silver Plated Earrings - Jewellery",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/sukkhi-stylish-silver-plated-earrings-jewellery/640/480",
     "brand": "Sukkhi",
     "category": "Jewellery",
     "description": "Experience the best quality with Sukkhi Stylish Silver Plated Earrings - Jewellery. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2185,7 +2185,7 @@ const products = [
   },
   {
     "name": "Sukkhi Elegant Silver Plated Earrings - Jewellery",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/sukkhi-elegant-silver-plated-earrings-jewellery/640/480",
     "brand": "Sukkhi",
     "category": "Jewellery",
     "description": "Experience the best quality with Sukkhi Elegant Silver Plated Earrings - Jewellery. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2199,7 +2199,7 @@ const products = [
   },
   {
     "name": "Tanishq (Artificial) High-Performance Necklace Set - Jewellery",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/tanishq-artificial-high-performance-necklace-set-jewellery/640/480",
     "brand": "Tanishq (Artificial)",
     "category": "Jewellery",
     "description": "Experience the best quality with Tanishq (Artificial) High-Performance Necklace Set - Jewellery. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2213,7 +2213,7 @@ const products = [
   },
   {
     "name": "Tanishq (Artificial) Compact Gold Plated Bangles - Jewellery",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/tanishq-artificial-compact-gold-plated-bangles-jewellery/640/480",
     "brand": "Tanishq (Artificial)",
     "category": "Jewellery",
     "description": "Experience the best quality with Tanishq (Artificial) Compact Gold Plated Bangles - Jewellery. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2227,7 +2227,7 @@ const products = [
   },
   {
     "name": "Lakme Modern Eyeliner - Makeup",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/lakme-modern-eyeliner-makeup/640/480",
     "brand": "Lakme",
     "category": "Makeup & Cosmetics",
     "description": "Experience the best quality with Lakme Modern Eyeliner - Makeup. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2241,7 +2241,7 @@ const products = [
   },
   {
     "name": "Sugar Classic Matte Lipstick - Makeup",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/sugar-classic-matte-lipstick-makeup/640/480",
     "brand": "Sugar",
     "category": "Makeup & Cosmetics",
     "description": "Experience the best quality with Sugar Classic Matte Lipstick - Makeup. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2255,7 +2255,7 @@ const products = [
   },
   {
     "name": "Mac Classic Liquid Foundation - Makeup",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/mac-classic-liquid-foundation-makeup/640/480",
     "brand": "Mac",
     "category": "Makeup & Cosmetics",
     "description": "Experience the best quality with Mac Classic Liquid Foundation - Makeup. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2269,7 +2269,7 @@ const products = [
   },
   {
     "name": "Lakme High-Performance Mascara - Makeup",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/lakme-high-performance-mascara-makeup/640/480",
     "brand": "Lakme",
     "category": "Makeup & Cosmetics",
     "description": "Experience the best quality with Lakme High-Performance Mascara - Makeup. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2283,7 +2283,7 @@ const products = [
   },
   {
     "name": "Maybelline Classic Matte Lipstick - Makeup",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/maybelline-classic-matte-lipstick-makeup/640/480",
     "brand": "Maybelline",
     "category": "Makeup & Cosmetics",
     "description": "Experience the best quality with Maybelline Classic Matte Lipstick - Makeup. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2297,7 +2297,7 @@ const products = [
   },
   {
     "name": "Mac Classic Matte Lipstick - Makeup",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/mac-classic-matte-lipstick-makeup/640/480",
     "brand": "Mac",
     "category": "Makeup & Cosmetics",
     "description": "Experience the best quality with Mac Classic Matte Lipstick - Makeup. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2311,7 +2311,7 @@ const products = [
   },
   {
     "name": "Maybelline Elegant Eyeliner - Makeup",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/maybelline-elegant-eyeliner-makeup/640/480",
     "brand": "Maybelline",
     "category": "Makeup & Cosmetics",
     "description": "Experience the best quality with Maybelline Elegant Eyeliner - Makeup. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2325,7 +2325,7 @@ const products = [
   },
   {
     "name": "Maybelline High-Performance Liquid Foundation - Makeup",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/maybelline-high-performance-liquid-foundation-makeup/640/480",
     "brand": "Maybelline",
     "category": "Makeup & Cosmetics",
     "description": "Experience the best quality with Maybelline High-Performance Liquid Foundation - Makeup. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2339,7 +2339,7 @@ const products = [
   },
   {
     "name": "Sugar Durable Liquid Foundation - Makeup",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/sugar-durable-liquid-foundation-makeup/640/480",
     "brand": "Sugar",
     "category": "Makeup & Cosmetics",
     "description": "Experience the best quality with Sugar Durable Liquid Foundation - Makeup. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2353,7 +2353,7 @@ const products = [
   },
   {
     "name": "Maybelline Compact Eyeliner - Makeup",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/maybelline-compact-eyeliner-makeup/640/480",
     "brand": "Maybelline",
     "category": "Makeup & Cosmetics",
     "description": "Experience the best quality with Maybelline Compact Eyeliner - Makeup. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2367,7 +2367,7 @@ const products = [
   },
   {
     "name": "Mac Stylish Compact Powder - Makeup",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/mac-stylish-compact-powder-makeup/640/480",
     "brand": "Mac",
     "category": "Makeup & Cosmetics",
     "description": "Experience the best quality with Mac Stylish Compact Powder - Makeup. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2381,7 +2381,7 @@ const products = [
   },
   {
     "name": "Maybelline Elegant Mascara - Makeup",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/maybelline-elegant-mascara-makeup/640/480",
     "brand": "Maybelline",
     "category": "Makeup & Cosmetics",
     "description": "Experience the best quality with Maybelline Elegant Mascara - Makeup. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2395,7 +2395,7 @@ const products = [
   },
   {
     "name": "Sugar Classic Compact Powder - Makeup",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/sugar-classic-compact-powder-makeup/640/480",
     "brand": "Sugar",
     "category": "Makeup & Cosmetics",
     "description": "Experience the best quality with Sugar Classic Compact Powder - Makeup. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2409,7 +2409,7 @@ const products = [
   },
   {
     "name": "Maybelline High-Performance Mascara - Makeup",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/maybelline-high-performance-mascara-makeup/640/480",
     "brand": "Maybelline",
     "category": "Makeup & Cosmetics",
     "description": "Experience the best quality with Maybelline High-Performance Mascara - Makeup. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2423,7 +2423,7 @@ const products = [
   },
   {
     "name": "Maybelline Modern Eyeliner - Makeup",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/maybelline-modern-eyeliner-makeup/640/480",
     "brand": "Maybelline",
     "category": "Makeup & Cosmetics",
     "description": "Experience the best quality with Maybelline Modern Eyeliner - Makeup. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2437,7 +2437,7 @@ const products = [
   },
   {
     "name": "Lakme Elegant Mascara - Makeup",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/lakme-elegant-mascara-makeup/640/480",
     "brand": "Lakme",
     "category": "Makeup & Cosmetics",
     "description": "Experience the best quality with Lakme Elegant Mascara - Makeup. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2451,7 +2451,7 @@ const products = [
   },
   {
     "name": "Mac Compact Matte Lipstick - Makeup",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/mac-compact-matte-lipstick-makeup/640/480",
     "brand": "Mac",
     "category": "Makeup & Cosmetics",
     "description": "Experience the best quality with Mac Compact Matte Lipstick - Makeup. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2465,7 +2465,7 @@ const products = [
   },
   {
     "name": "Accessorize Stylish Fashion Backpack - Girls",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/accessorize-stylish-fashion-backpack-girls/640/480",
     "brand": "Accessorize",
     "category": "Girls Lifestyle",
     "description": "Experience the best quality with Accessorize Stylish Fashion Backpack - Girls. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2479,7 +2479,7 @@ const products = [
   },
   {
     "name": "Accessorize Premium Scrunchies Pack - Girls",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/accessorize-premium-scrunchies-pack-girls/640/480",
     "brand": "Accessorize",
     "category": "Girls Lifestyle",
     "description": "Experience the best quality with Accessorize Premium Scrunchies Pack - Girls. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2493,7 +2493,7 @@ const products = [
   },
   {
     "name": "Miniso High-Performance Fashion Backpack - Girls",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/miniso-high-performance-fashion-backpack-girls/640/480",
     "brand": "Miniso",
     "category": "Girls Lifestyle",
     "description": "Experience the best quality with Miniso High-Performance Fashion Backpack - Girls. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2507,7 +2507,7 @@ const products = [
   },
   {
     "name": "Chumbak Premium Hair Band Set - Girls",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/chumbak-premium-hair-band-set-girls/640/480",
     "brand": "Chumbak",
     "category": "Girls Lifestyle",
     "description": "Experience the best quality with Chumbak Premium Hair Band Set - Girls. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2521,7 +2521,7 @@ const products = [
   },
   {
     "name": "Accessorize High-Performance Hair Band Set - Girls",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/accessorize-high-performance-hair-band-set-girls/640/480",
     "brand": "Accessorize",
     "category": "Girls Lifestyle",
     "description": "Experience the best quality with Accessorize High-Performance Hair Band Set - Girls. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2535,7 +2535,7 @@ const products = [
   },
   {
     "name": "Miniso Modern Cute Clutch - Girls",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/miniso-modern-cute-clutch-girls/640/480",
     "brand": "Miniso",
     "category": "Girls Lifestyle",
     "description": "Experience the best quality with Miniso Modern Cute Clutch - Girls. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2549,7 +2549,7 @@ const products = [
   },
   {
     "name": "Miniso Premium Cute Clutch - Girls",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/miniso-premium-cute-clutch-girls/640/480",
     "brand": "Miniso",
     "category": "Girls Lifestyle",
     "description": "Experience the best quality with Miniso Premium Cute Clutch - Girls. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2563,7 +2563,7 @@ const products = [
   },
   {
     "name": "Chumbak Modern Hair Band Set - Girls",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/chumbak-modern-hair-band-set-girls/640/480",
     "brand": "Chumbak",
     "category": "Girls Lifestyle",
     "description": "Experience the best quality with Chumbak Modern Hair Band Set - Girls. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2577,7 +2577,7 @@ const products = [
   },
   {
     "name": "Accessorize Compact Kawaii Diary - Girls",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/accessorize-compact-kawaii-diary-girls/640/480",
     "brand": "Accessorize",
     "category": "Girls Lifestyle",
     "description": "Experience the best quality with Accessorize Compact Kawaii Diary - Girls. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2591,7 +2591,7 @@ const products = [
   },
   {
     "name": "Miniso High-Performance Hair Band Set - Girls",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/miniso-high-performance-hair-band-set-girls/640/480",
     "brand": "Miniso",
     "category": "Girls Lifestyle",
     "description": "Experience the best quality with Miniso High-Performance Hair Band Set - Girls. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2605,7 +2605,7 @@ const products = [
   },
   {
     "name": "Chumbak Durable Fashion Backpack - Girls",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/chumbak-durable-fashion-backpack-girls/640/480",
     "brand": "Chumbak",
     "category": "Girls Lifestyle",
     "description": "Experience the best quality with Chumbak Durable Fashion Backpack - Girls. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2619,7 +2619,7 @@ const products = [
   },
   {
     "name": "Chumbak Premium Kawaii Diary - Girls",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/chumbak-premium-kawaii-diary-girls/640/480",
     "brand": "Chumbak",
     "category": "Girls Lifestyle",
     "description": "Experience the best quality with Chumbak Premium Kawaii Diary - Girls. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2633,7 +2633,7 @@ const products = [
   },
   {
     "name": "Miniso Compact Fashion Backpack - Girls",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/miniso-compact-fashion-backpack-girls/640/480",
     "brand": "Miniso",
     "category": "Girls Lifestyle",
     "description": "Experience the best quality with Miniso Compact Fashion Backpack - Girls. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2647,7 +2647,7 @@ const products = [
   },
   {
     "name": "Chumbak Compact Cute Clutch - Girls",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/chumbak-compact-cute-clutch-girls/640/480",
     "brand": "Chumbak",
     "category": "Girls Lifestyle",
     "description": "Experience the best quality with Chumbak Compact Cute Clutch - Girls. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2661,7 +2661,7 @@ const products = [
   },
   {
     "name": "Chumbak Classic Fashion Backpack - Girls",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/chumbak-classic-fashion-backpack-girls/640/480",
     "brand": "Chumbak",
     "category": "Girls Lifestyle",
     "description": "Experience the best quality with Chumbak Classic Fashion Backpack - Girls. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2675,7 +2675,7 @@ const products = [
   },
   {
     "name": "Miniso Modern Kawaii Diary - Girls",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/miniso-modern-kawaii-diary-girls/640/480",
     "brand": "Miniso",
     "category": "Girls Lifestyle",
     "description": "Experience the best quality with Miniso Modern Kawaii Diary - Girls. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2689,7 +2689,7 @@ const products = [
   },
   {
     "name": "Miniso High-Performance Kawaii Diary - Girls",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/miniso-high-performance-kawaii-diary-girls/640/480",
     "brand": "Miniso",
     "category": "Girls Lifestyle",
     "description": "Experience the best quality with Miniso High-Performance Kawaii Diary - Girls. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2703,7 +2703,7 @@ const products = [
   },
   {
     "name": "Beardo High-Performance Grooming Kit - Boys",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/beardo-high-performance-grooming-kit-boys/640/480",
     "brand": "Beardo",
     "category": "Boys Lifestyle",
     "description": "Experience the best quality with Beardo High-Performance Grooming Kit - Boys. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2717,7 +2717,7 @@ const products = [
   },
   {
     "name": "Wildcraft High-Performance Cap - Boys",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/wildcraft-high-performance-cap-boys/640/480",
     "brand": "Wildcraft",
     "category": "Boys Lifestyle",
     "description": "Experience the best quality with Wildcraft High-Performance Cap - Boys. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2731,7 +2731,7 @@ const products = [
   },
   {
     "name": "Fastrack Elegant Cap - Boys",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/fastrack-elegant-cap-boys/640/480",
     "brand": "Fastrack",
     "category": "Boys Lifestyle",
     "description": "Experience the best quality with Fastrack Elegant Cap - Boys. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2745,7 +2745,7 @@ const products = [
   },
   {
     "name": "Fastrack Compact Wrist Band - Boys",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/fastrack-compact-wrist-band-boys/640/480",
     "brand": "Fastrack",
     "category": "Boys Lifestyle",
     "description": "Experience the best quality with Fastrack Compact Wrist Band - Boys. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2759,7 +2759,7 @@ const products = [
   },
   {
     "name": "Fastrack Elegant Aviator Sunglasses - Boys",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/fastrack-elegant-aviator-sunglasses-boys/640/480",
     "brand": "Fastrack",
     "category": "Boys Lifestyle",
     "description": "Experience the best quality with Fastrack Elegant Aviator Sunglasses - Boys. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2773,7 +2773,7 @@ const products = [
   },
   {
     "name": "Wildcraft Premium Aviator Sunglasses - Boys",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/wildcraft-premium-aviator-sunglasses-boys/640/480",
     "brand": "Wildcraft",
     "category": "Boys Lifestyle",
     "description": "Experience the best quality with Wildcraft Premium Aviator Sunglasses - Boys. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2787,7 +2787,7 @@ const products = [
   },
   {
     "name": "Beardo Compact Aviator Sunglasses - Boys",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/beardo-compact-aviator-sunglasses-boys/640/480",
     "brand": "Beardo",
     "category": "Boys Lifestyle",
     "description": "Experience the best quality with Beardo Compact Aviator Sunglasses - Boys. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2801,7 +2801,7 @@ const products = [
   },
   {
     "name": "Beardo Stylish Wrist Band - Boys",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/beardo-stylish-wrist-band-boys/640/480",
     "brand": "Beardo",
     "category": "Boys Lifestyle",
     "description": "Experience the best quality with Beardo Stylish Wrist Band - Boys. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2815,7 +2815,7 @@ const products = [
   },
   {
     "name": "Wildcraft Classic Leather Wallet - Boys",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/wildcraft-classic-leather-wallet-boys/640/480",
     "brand": "Wildcraft",
     "category": "Boys Lifestyle",
     "description": "Experience the best quality with Wildcraft Classic Leather Wallet - Boys. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2829,7 +2829,7 @@ const products = [
   },
   {
     "name": "Beardo Durable Cap - Boys",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/beardo-durable-cap-boys/640/480",
     "brand": "Beardo",
     "category": "Boys Lifestyle",
     "description": "Experience the best quality with Beardo Durable Cap - Boys. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2843,7 +2843,7 @@ const products = [
   },
   {
     "name": "Beardo Elegant Leather Wallet - Boys",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/beardo-elegant-leather-wallet-boys/640/480",
     "brand": "Beardo",
     "category": "Boys Lifestyle",
     "description": "Experience the best quality with Beardo Elegant Leather Wallet - Boys. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2857,7 +2857,7 @@ const products = [
   },
   {
     "name": "Wildcraft Compact Wrist Band - Boys",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/wildcraft-compact-wrist-band-boys/640/480",
     "brand": "Wildcraft",
     "category": "Boys Lifestyle",
     "description": "Experience the best quality with Wildcraft Compact Wrist Band - Boys. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2871,7 +2871,7 @@ const products = [
   },
   {
     "name": "Wildcraft Durable Wrist Band - Boys",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/wildcraft-durable-wrist-band-boys/640/480",
     "brand": "Wildcraft",
     "category": "Boys Lifestyle",
     "description": "Experience the best quality with Wildcraft Durable Wrist Band - Boys. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2885,7 +2885,7 @@ const products = [
   },
   {
     "name": "Beardo Stylish Aviator Sunglasses - Boys",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/beardo-stylish-aviator-sunglasses-boys/640/480",
     "brand": "Beardo",
     "category": "Boys Lifestyle",
     "description": "Experience the best quality with Beardo Stylish Aviator Sunglasses - Boys. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2899,7 +2899,7 @@ const products = [
   },
   {
     "name": "Fastrack Classic Leather Wallet - Boys",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/fastrack-classic-leather-wallet-boys/640/480",
     "brand": "Fastrack",
     "category": "Boys Lifestyle",
     "description": "Experience the best quality with Fastrack Classic Leather Wallet - Boys. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2913,7 +2913,7 @@ const products = [
   },
   {
     "name": "Fastrack Classic Wrist Band - Boys",
-    "image": "https://images.unsplash.com/photo-1493723843671-1d655e66ac1c?w=640",
+    "image": "https://picsum.photos/seed/fastrack-classic-wrist-band-boys/640/480",
     "brand": "Fastrack",
     "category": "Boys Lifestyle",
     "description": "Experience the best quality with Fastrack Classic Wrist Band - Boys. Perfect for daily use and designed to last long. Highly rated by customers.",
@@ -2927,7 +2927,7 @@ const products = [
   },
   {
     "name": "Wildcraft Durable Cap - Boys",
-    "image": "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=640",
+    "image": "https://picsum.photos/seed/wildcraft-durable-cap-boys/640/480",
     "brand": "Wildcraft",
     "category": "Boys Lifestyle",
     "description": "Experience the best quality with Wildcraft Durable Cap - Boys. Perfect for daily use and designed to last long. Highly rated by customers.",
