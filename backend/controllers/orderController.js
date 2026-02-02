@@ -71,6 +71,9 @@ const addOrderItems = asyncHandler(async (req, res) => {
           discountAmount = dbCoupon.discount;
         }
         appliedCouponCode = dbCoupon.code;
+        console.log(`🎟️ Coupon Applied: ${appliedCouponCode} | Discount: ${discountAmount} | Subtotal: ${subtotal}`);
+      } else {
+        console.log(`❌ Invalid or Expired Coupon: ${coupon}`);
       }
     }
 
